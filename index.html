@@ -75,6 +75,26 @@
       background-color: #0099dd;
     }
 
+    .thank-you {
+      display: none;
+      background-color: #0f2d1b;
+      border-left: 5px solid #39e09b;
+      padding: 25px;
+      margin-bottom: 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(57, 224, 155, 0.3);
+    }
+
+    .thank-you h2 {
+      color: #39e09b;
+      margin: 0 0 10px;
+    }
+
+    .thank-you p {
+      margin: 0;
+      color: #d5ffd5;
+    }
+
     footer {
       text-align: center;
       padding: 30px 10px;
@@ -90,6 +110,11 @@
   </header>
 
   <main>
+    <div class="thank-you" id="thankYouBox">
+      <h2>Thank You for Your Purchase!</h2>
+      <p>Your order has been received. Check your email shortly for access details.</p>
+    </div>
+
     <h2 style="text-align:center; margin-bottom: 40px;">Choose Your Offer Below</h2>
 
     <div class="offer">
@@ -139,5 +164,11 @@
     &copy; 2025 AMJ Digital Vault. All rights reserved.
   </footer>
 
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("success") === "true") {
+      document.getElementById("thankYouBox").style.display = "block";
+    }
+  </script>
 </body>
 </html>
