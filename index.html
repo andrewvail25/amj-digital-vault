@@ -40,6 +40,12 @@
       border-radius: 10px;
       box-shadow: 0 0 12px rgba(0, 183, 255, 0.2);
       position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .offer:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 15px rgba(0, 183, 255, 0.4);
     }
 
     .offer h2 {
@@ -92,6 +98,13 @@
       box-shadow: 0 0 8px rgba(255,165,0,0.6);
     }
 
+    /* Highlighted style for MOST POPULAR */
+    .highlight {
+      border: 2px solid #FFA500;
+      box-shadow: 0 0 20px rgba(255,165,0,0.6);
+      transform: scale(1.05);
+    }
+
     footer {
       text-align: center;
       padding: 30px 10px;
@@ -137,7 +150,7 @@
       <button onclick="location.href='https://buy.stripe.com/4gM8wPenU8uL4pJ2mI3ks03'">Buy Now</button>
     </div>
 
-    <div class="offer">
+    <div class="offer highlight">
       <span class="badge">MOST POPULAR</span>
       <h2>Quick Launch System</h2>
       <p class="price">$97</p>
