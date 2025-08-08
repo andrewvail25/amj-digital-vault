@@ -4,212 +4,157 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AMJ Digital Vault – Exclusive Offers</title>
-  <meta name="description" content="Premium digital offers from AMJ Digital Vault. Instant access. Secure Stripe checkout."/>
   <style>
-    :root{
-      --bg:#0b0d10;
-      --panel:#11151a;
-      --muted:#b7c0cc;
-      --brand:#00b7ff;
-      --brand-2:#39e09b;
-      --ring: rgba(0,183,255,.35);
-      --card:#161b22;
-      --stroke:#202632;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:#eef2f7;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial,sans-serif}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-
-    header{
-      position:sticky;top:0;z-index:10;
-      background:linear-gradient(180deg,#0c1218 0%, rgba(12,18,24,.6) 100%);
-      border-bottom:1px solid var(--stroke);
-      padding:18px 20px;
-      display:flex;align-items:center;justify-content:center;
-    }
-    .brand{
-      display:flex;gap:10px;align-items:center;
-      font-weight:700;letter-spacing:.4px
-    }
-    .brand-badge{
-      width:28px;height:28px;border-radius:6px;
-      background: radial-gradient(120% 120% at 0% 0%, var(--brand) 0%, #7cf8ff 40%, transparent 41%) , radial-gradient(120% 120% at 100% 100%, var(--brand-2) 0%, #9fffd0 40%, transparent 41%);
-      box-shadow:0 0 22px rgba(0,183,255,.35), inset 0 0 20px rgba(57,224,155,.15);
-    }
-    .brand span{color:#dff7ff}
-    .hero{
-      max-width:1000px;margin:28px auto 8px;padding:0 18px;text-align:center;
-    }
-    .hero h1{
-      margin:8px 0 8px;font-size:28px;line-height:1.2;
-      background:linear-gradient(90deg,#c6f7ff, #9fffd0);
-      -webkit-background-clip:text;background-clip:text;color:transparent;
-      font-weight:800;
-    }
-    .hero p{margin:0;color:var(--muted);font-size:15px}
-
-    .notice{
-      display:none;margin:18px auto 0;max-width:1000px;padding:14px 16px;border-radius:10px;
-      background:linear-gradient(180deg,rgba(57,224,155,.12), rgba(57,224,155,.05));
-      border:1px solid rgba(57,224,155,.3); color:#d8ffe9; text-align:center;
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0e0e0e;
+      color: #f1f1f1;
+      margin: 0;
+      padding: 0;
     }
 
-    .grid{
-      max-width:1000px;margin:22px auto;padding:0 18px;
-      display:grid;grid-template-columns:repeat(12,1fr);gap:18px;
-    }
-    .card{
-      grid-column: span 12;
-      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0) 60%), var(--card);
-      border:1px solid var(--stroke);
-      border-radius:14px;padding:18px;position:relative;overflow:hidden;
-      box-shadow:0 10px 30px rgba(0,0,0,.25);
-    }
-    @media (min-width:720px){
-      .card{grid-column: span 6;}
-    }
-    .card::after{
-      content:"";position:absolute;inset:auto -30% -30% auto;width:220px;height:220px;border-radius:50%;
-      filter:blur(50px);opacity:.35;pointer-events:none;
-    }
-    /* Accent bulbs per card */
-    .c1::after{background: radial-gradient(closest-side, var(--brand) , transparent 70%);}
-    .c2::after{background: radial-gradient(closest-side, #ffb86c , transparent 70%);}
-    .c3::after{background: radial-gradient(closest-side, #b388ff , transparent 70%);}
-    .c4::after{background: radial-gradient(closest-side, #64d2ff , transparent 70%);}
-    .c5::after{background: radial-gradient(closest-side, #39e09b , transparent 70%);}
-    .c6::after{background: radial-gradient(closest-side, #ff8fb1 , transparent 70%);}
-
-    .title{margin:0 0 8px;font-size:20px;color:#eaf6ff;font-weight:700}
-    .price{margin:0 0 12px;color:var(--brand-2);font-weight:800}
-    .desc{margin:0 0 16px;color:var(--muted);font-size:14px}
-    .cta{
-      display:inline-flex;align-items:center;justify-content:center;gap:8px;
-      padding:12px 16px;border-radius:10px;border:1px solid rgba(0,183,255,.35);
-      background:linear-gradient(180deg, rgba(0,183,255,.25), rgba(0,183,255,.1));
-      color:#001018;font-weight:800;text-shadow:0 1px 0 rgba(255,255,255,.2);
-      box-shadow:0 8px 18px var(--ring), inset 0 0 0 1px rgba(255,255,255,.04);
-      transition:transform .08s ease, box-shadow .12s ease, background .12s ease;
-      cursor:pointer
-    }
-    .cta:hover{transform:translateY(-1px);box-shadow:0 12px 28px var(--ring)}
-    .badge{
-      position:absolute;top:14px;right:14px;
-      font-size:11px;font-weight:800;letter-spacing:.4px;
-      padding:6px 8px;border-radius:999px;
-      background:linear-gradient(90deg,#ffd27a,#ffb86c);color:#2b1900;border:1px solid rgba(255,184,108,.5)
+    header {
+      background-color: #111;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 2px solid #ffb347;
     }
 
-    .trust{
-      max-width:1000px;margin:4px auto 30px;padding:0 18px;
-      display:flex;flex-wrap:wrap;gap:10px;justify-content:center;color:#cbd5e1;
-      font-size:12.5px
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      color: #ffb347;
+      letter-spacing: 1px;
     }
-    .trust .pill{
-      border:1px solid var(--stroke);background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);
-      padding:8px 12px;border-radius:999px;display:flex;align-items:center;gap:8px
+
+    main {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
     }
-    .trust .dot{width:8px;height:8px;border-radius:50%;background:var(--brand-2);box-shadow:0 0 8px var(--brand-2)}
-    footer{
-      border-top:1px solid var(--stroke);
-      background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.02));
-      color:#a8b3c2;font-size:12px;text-align:center;padding:20px 16px;margin-top:8px
+
+    h2.section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 26px;
+      color: #ffb347;
     }
-    .legal a{color:#9ad7ff;text-decoration:underline}
+
+    .offer {
+      background: #1c1c1c;
+      padding: 25px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(255, 179, 71, 0.3);
+      border: 2px solid transparent;
+      transition: transform 0.2s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .offer:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(255, 179, 71, 0.5);
+      border-color: #ffb347;
+    }
+
+    .offer h2 {
+      font-size: 24px;
+      color: #ffb347;
+      margin-top: 0;
+    }
+
+    .offer .price {
+      font-size: 18px;
+      color: #39e09b;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .offer p {
+      font-size: 15px;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .offer button {
+      background-color: #ffb347;
+      color: #000;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 17px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .offer button:hover {
+      background-color: #e69500;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      color: #777;
+      font-size: 13px;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="brand">
-      <div class="brand-badge" aria-hidden="true"></div>
-      <span>AMJ Digital Vault</span>
-    </div>
+    <h1>AMJ Digital Vault</h1>
   </header>
 
-  <!-- Thank-you notice (shown when ?success=true) -->
-  <div id="thankyou" class="notice" role="status" aria-live="polite">
-    ✅ Thank you for your purchase! Your access details are on the way. If you need help: <strong>support@amjdigitalvault.com</strong>
-  </div>
+  <main>
+    <h2 class="section-title">Choose Your Offer Below</h2>
 
-  <section class="hero">
-    <h1>Grab Your Offer. Get Instant Access.</h1>
-    <p>Secure Stripe checkout • Instant digital delivery • Licensed & watermarked</p>
-  </section>
-
-  <section class="grid" aria-label="Offers">
-
-    <article class="card c1">
-      <h2 class="title">Mini Vault Sample Pack</h2>
+    <div class="offer">
+      <h2>Mini Vault Sample Pack</h2>
       <p class="price">$7</p>
-      <p class="desc">A fast taste of the system. Instant access, plug-and-play.</p>
-      <button class="cta" onclick="location.href='https://buy.stripe.com/7sY9AT0x4h1he0je5q3ks00'">Buy Now</button>
-    </article>
+      <p>Get a quick preview of the digital vault system.</p>
+      <button onclick="location.href='https://buy.stripe.com/7sY9AT0x4h1he0je5q3ks00'">Buy Now</button>
+    </div>
 
-    <article class="card c2">
-      <h2 class="title">Hustler's Toolkit</h2>
+    <div class="offer">
+      <h2>Hustler's Toolkit</h2>
       <p class="price">$17</p>
-      <p class="desc">Quick tools to kickstart automation and monetization.</p>
-      <button class="cta" onclick="location.href='https://buy.stripe.com/6oU7sLcfMh1hbSb6CY3ks01'">Buy Now</button>
-    </article>
+      <p>Quick tools to get you started fast with automation and monetization.</p>
+      <button onclick="location.href='https://buy.stripe.com/6oU7sLcfMh1hbSb6CY3ks01'">Buy Now</button>
+    </div>
 
-    <article class="card c3">
-      <h2 class="title">Affiliate Magnet Kit</h2>
+    <div class="offer">
+      <h2>Affiliate Magnet Kit</h2>
       <p class="price">$27</p>
-      <p class="desc">Templates and angles that convert affiliate traffic like clockwork.</p>
-      <button class="cta" onclick="location.href='https://buy.stripe.com/9B6dR96Vs12j6xR4uQ3ks02'">Buy Now</button>
-    </article>
+      <p>Templates and strategies to make affiliate commissions like clockwork.</p>
+      <button onclick="location.href='https://buy.stripe.com/9B6dR96Vs12j6xR4uQ3ks02'">Buy Now</button>
+    </div>
 
-    <article class="card c4">
-      <h2 class="title">Fast Stack Starter Vault</h2>
+    <div class="offer">
+      <h2>Fast Stack Starter Vault</h2>
       <p class="price">$37</p>
-      <p class="desc">Plug-and-play vault to start selling digital products instantly.</p>
-      <button class="cta" onclick="location.href='https://buy.stripe.com/4gM8wPenU8uL4pJ2mI3ks03'">Buy Now</button>
-    </article>
+      <p>A plug-and-play business kit to sell digital products instantly.</p>
+      <button onclick="location.href='https://buy.stripe.com/4gM8wPenU8uL4pJ2mI3ks03'">Buy Now</button>
+    </div>
 
-    <article class="card c5">
-      <div class="badge" aria-hidden="true">MOST POPULAR</div>
-      <h2 class="title">Quick Launch System</h2>
+    <div class="offer">
+      <h2>Quick Launch System</h2>
       <p class="price">$97</p>
-      <p class="desc">Rapid setup system to launch a revenue-ready digital business.</p>
-      <button class="cta" onclick="location.href='https://buy.stripe.com/00w9ATcfM26nf4n2mI3ks06'">Buy Now</button>
-    </article>
+      <p>Launch your digital business with this rapid setup system.</p>
+      <button onclick="location.href='https://buy.stripe.com/00w9ATcfM26nf4n2mI3ks06'">Buy Now</button>
+    </div>
 
-    <article class="card c6">
-      <h2 class="title">Done-For-You Vault Launch</h2>
+    <div class="offer">
+      <h2>Done-For-You Vault Launch</h2>
       <p class="price">$997</p>
-      <p class="desc">We build and launch the entire system for you. White-glove delivery.</p>
-      <button class="cta" onclick="location.href='https://buy.stripe.com/eVqcN54Nkh1hf4n7H23ks0a'">Buy Now</button>
-    </article>
-
-  </section>
-
-  <div class="trust" aria-label="Trust and assurances">
-    <div class="pill"><span class="dot"></span> Secure Stripe Checkout</div>
-    <div class="pill"><span class="dot"></span> Instant Digital Delivery</div>
-    <div class="pill"><span class="dot"></span> Licensed & Watermarked</div>
-    <div class="pill"><span class="dot"></span> Mobile Friendly</div>
-  </div>
+      <p>The complete digital vault system, launched for you with everything done.</p>
+      <button onclick="location.href='https://buy.stripe.com/eVqcN54Nkh1hf4n7H23ks0a'">Buy Now</button>
+    </div>
+  </main>
 
   <footer>
-    <div>© 2025 AMJ Digital Vault. All rights reserved.</div>
-    <div class="legal" style="margin-top:6px">
-      <a href="#" onclick="alert('Coming soon')">Terms</a> ·
-      <a href="#" onclick="alert('Coming soon')">Privacy</a> ·
-      <a href="mailto:support@amjdigitalvault.com">Contact</a>
-    </div>
+    &copy; 2025 AMJ Digital Vault. All rights reserved.
   </footer>
 
-  <script>
-    // Show inline thank-you banner if Stripe redirected with ?success=true
-    (function(){
-      const params = new URLSearchParams(window.location.search);
-      if (params.get('success') === 'true') {
-        const bar = document.getElementById('thankyou');
-        if (bar){ bar.style.display = 'block'; window.scrollTo({ top: 0, behavior: 'smooth' }); }
-      }
-    })();
-  </script>
 </body>
 </html>
