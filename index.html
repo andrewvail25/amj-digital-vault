@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -11,164 +10,157 @@
       color: #f1f1f1;
       margin: 0;
       padding: 0;
-    }
+      scroll-behavior: smooth;
+    }header {
+  background-color: #111;
+  padding: 30px 20px;
+  text-align: center;
+  border-bottom: 2px solid #0070f3;
+}
 
-    header {
-      background-color: #111;
-      padding: 30px 20px;
-      text-align: center;
-      border-bottom: 2px solid #0070f3;
-    }
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #00b7ff;
+  letter-spacing: 1px;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-      color: #00b7ff;
-      letter-spacing: 1px;
-    }
+main {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
 
-    main {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
+.offer {
+  background: #1c1c1c;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 183, 255, 0.2);
+}
 
-    .offer {
-      background: #1c1c1c;
-      padding: 25px;
-      margin-bottom: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 12px rgba(0, 183, 255, 0.2);
-    }
+.offer h2 {
+  font-size: 24px;
+  color: #00b7ff;
+  margin-top: 0;
+}
 
-    .offer h2 {
-      font-size: 24px;
-      color: #00b7ff;
-      margin-top: 0;
-    }
+.offer .price {
+  font-size: 18px;
+  color: #39e09b;
+  font-weight: bold;
+  margin: 10px 0;
+}
 
-    .offer .price {
-      font-size: 18px;
-      color: #39e09b;
-      font-weight: bold;
-      margin: 10px 0;
-    }
+.offer p {
+  font-size: 15px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
 
-    .offer p {
-      font-size: 15px;
-      color: #ccc;
-      margin-bottom: 20px;
-    }
+.offer button {
+  background-color: #00b7ff;
+  color: #000;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
 
-    .offer button {
-      background-color: #00b7ff;
-      color: #000;
-      padding: 12px 22px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: bold;
-    }
+.offer button:hover {
+  background-color: #0099dd;
+}
 
-    .offer button:hover {
-      background-color: #0099dd;
-    }
+.thank-you {
+  background-color: #132;
+  border: 2px solid #39e09b;
+  padding: 30px;
+  border-radius: 12px;
+  margin: 60px auto;
+  max-width: 700px;
+  text-align: center;
+  display: none;
+}
 
-    .thank-you {
-      display: none;
-      background-color: #0f2d1b;
-      border-left: 5px solid #39e09b;
-      padding: 25px;
-      margin-bottom: 40px;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(57, 224, 155, 0.3);
-    }
+.thank-you h2 {
+  color: #39e09b;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
 
-    .thank-you h2 {
-      color: #39e09b;
-      margin: 0 0 10px;
-    }
+.thank-you p {
+  color: #ccc;
+  font-size: 16px;
+}
 
-    .thank-you p {
-      margin: 0;
-      color: #d5ffd5;
-    }
+footer {
+  text-align: center;
+  padding: 30px 10px;
+  color: #777;
+  font-size: 13px;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px 10px;
-      color: #777;
-      font-size: 13px;
-    }
   </style>
 </head>
-<body>
-
-  <header>
+<body>  <header>
     <h1>AMJ Digital Vault</h1>
-  </header>
+  </header>  <main>
+    <h2 style="text-align:center; margin-bottom: 40px;">Choose Your Offer Below</h2><div class="offer">
+  <h2>Mini Vault Sample Pack</h2>
+  <p class="price">$7</p>
+  <p>Get a quick preview of the digital vault system.</p>
+  <button onclick="location.href='https://buy.stripe.com/7sY9AT0x4h1he0je5q3ks00'">Buy Now</button>
+</div>
 
-  <main>
-    <div class="thank-you" id="thankYouBox">
-      <h2>Thank You for Your Purchase!</h2>
-      <p>Your order has been received. Check your email shortly for access details.</p>
-    </div>
+<div class="offer">
+  <h2>Hustler's Toolkit</h2>
+  <p class="price">$17</p>
+  <p>Quick tools to get you started fast with automation and monetization.</p>
+  <button onclick="location.href='https://buy.stripe.com/6oU7sLcfMh1hbSb6CY3ks01'">Buy Now</button>
+</div>
 
-    <h2 style="text-align:center; margin-bottom: 40px;">Choose Your Offer Below</h2>
+<div class="offer">
+  <h2>Affiliate Magnet Kit</h2>
+  <p class="price">$27</p>
+  <p>Templates and strategies to make affiliate commissions like clockwork.</p>
+  <button onclick="location.href='https://buy.stripe.com/9B6dR96Vs12j6xR4uQ3ks02'">Buy Now</button>
+</div>
 
-    <div class="offer">
-      <h2>Mini Vault Sample Pack</h2>
-      <p class="price">$7</p>
-      <p>Get a quick preview of the digital vault system.</p>
-      <button onclick="location.href='https://buy.stripe.com/7sY9AT0x4h1he0je5q3ks00'">Buy Now</button>
-    </div>
+<div class="offer">
+  <h2>Fast Stack Starter Vault</h2>
+  <p class="price">$37</p>
+  <p>A plug-and-play business kit to sell digital products instantly.</p>
+  <button onclick="location.href='https://buy.stripe.com/4gM8wPenU8uL4pJ2mI3ks03'">Buy Now</button>
+</div>
 
-    <div class="offer">
-      <h2>Hustler's Toolkit</h2>
-      <p class="price">$17</p>
-      <p>Quick tools to get you started fast with automation and monetization.</p>
-      <button onclick="location.href='https://buy.stripe.com/6oU7sLcfMh1hbSb6CY3ks01'">Buy Now</button>
-    </div>
+<div class="offer">
+  <h2>Quick Launch System</h2>
+  <p class="price">$97</p>
+  <p>Launch your digital business with this rapid setup system.</p>
+  <button onclick="location.href='https://buy.stripe.com/00w9ATcfM26nf4n2mI3ks06'">Buy Now</button>
+</div>
 
-    <div class="offer">
-      <h2>Affiliate Magnet Kit</h2>
-      <p class="price">$27</p>
-      <p>Templates and strategies to make affiliate commissions like clockwork.</p>
-      <button onclick="location.href='https://buy.stripe.com/9B6dR96Vs12j6xR4uQ3ks02'">Buy Now</button>
-    </div>
+<div class="offer">
+  <h2>Done-For-You Vault Launch</h2>
+  <p class="price">$997</p>
+  <p>The complete digital vault system, launched for you with everything done.</p>
+  <button onclick="location.href='https://buy.stripe.com/eVqcN54Nkh1hf4n7H23ks0a'">Buy Now</button>
+</div>
 
-    <div class="offer">
-      <h2>Fast Stack Starter Vault</h2>
-      <p class="price">$37</p>
-      <p>A plug-and-play business kit to sell digital products instantly.</p>
-      <button onclick="location.href='https://buy.stripe.com/4gM8wPenU8uL4pJ2mI3ks03'">Buy Now</button>
-    </div>
+<div class="thank-you" id="thankyou">
+  <h2>Thank You for Your Purchase!</h2>
+  <p>Your transaction was successful. Check your email for access details.<br>
+  If you have any questions, contact support@amjdigitalvault.com</p>
+</div>
 
-    <div class="offer">
-      <h2>Quick Launch System</h2>
-      <p class="price">$97</p>
-      <p>Launch your digital business with this rapid setup system.</p>
-      <button onclick="location.href='https://buy.stripe.com/00w9ATcfM26nf4n2mI3ks06'">Buy Now</button>
-    </div>
-
-    <div class="offer">
-      <h2>Done-For-You Vault Launch</h2>
-      <p class="price">$997</p>
-      <p>The complete digital vault system, launched for you with everything done.</p>
-      <button onclick="location.href='https://buy.stripe.com/eVqcN54Nkh1hf4n7H23ks0a'">Buy Now</button>
-    </div>
-  </main>
-
-  <footer>
+  </main>  <footer>
     &copy; 2025 AMJ Digital Vault. All rights reserved.
-  </footer>
-
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("success") === "true") {
-      document.getElementById("thankYouBox").style.display = "block";
+  </footer>  <script>
+    if (window.location.hash === "#thankyou") {
+      document.getElementById("thankyou").style.display = "block";
+      window.scrollTo({ top: document.getElementById("thankyou").offsetTop - 20, behavior: "smooth" });
     }
-  </script>
-</body>
+  </script></body>
 </html>
