@@ -1,29 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Thank You — Mini Vault Sample Pack</title>
   <style>
-    :root{--bg:#0b0f14;--card:#121923;--ink:#eaf2ff;--muted:#94a3b8;--accent:#22d3ee}
-    *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,Arial;background:var(--bg);color:var(--ink)}
-    .wrap{max-width:860px;margin:0 auto;padding:20px}
-    .card{background:linear-gradient(180deg,#121923,#0f141b);border:1px solid #223;box-shadow:0 10px 30px rgba(0,0,0,.35);border-radius:16px;padding:28px}
-    h1{margin:0 0 6px;font-size:28px} p{color:var(--muted);line-height:1.6}
-    .btn{display:inline-block;padding:12px 16px;border-radius:12px;text-decoration:none;background:var(--accent);color:#001a1f;font-weight:700;margin:6px 8px 0 0}
+    :root{--bg:#0b0f14;--card:#121923;--ink:#eaf2ff;--muted:#94a3b8;--edge:#223;--cta:#22d3ee;--cta-ink:#001a1f}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,Arial}
+    .wrap{max-width:880px;margin:0 auto;padding:22px}
+    .card{background:linear-gradient(180deg,#121923,#0f141b);border:1px solid var(--edge);border-radius:16px;padding:26px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    h1{margin:0 0 8px;font-size:28px} p{color:var(--muted);line-height:1.55}
+    .section{margin-top:18px;padding:16px;border:1px solid var(--edge);border-radius:12px;background:#0f1622}
+    .btn{display:inline-block;margin-top:10px;background:var(--cta);color:var(--cta-ink);padding:12px 16px;border-radius:12px;font-weight:800;text-decoration:none}
+    .badges{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+    .badge{border:1px solid var(--edge);border-radius:999px;padding:6px 10px;font-size:12px;background:#0e1520}
+    .upsells{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .up{background:#f59e0b;color:#1a1302}
+    pre{white-space:pre-wrap;line-height:1.45;margin:0;color:#dbe5ff;background:#0b1220;padding:12px;border-radius:10px;border:1px solid #1b2432}
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="card">
       <h1>You're set. ✅</h1>
-      <p>Download your Mini Vault Sample Pack below. Save this page.</p>
-      <p><a class="btn" href="<!-- TODO: paste delivery link for Sample Pack -->" target="_blank" rel="noopener">Download Sample Pack</a></p>
-      <h2 style="margin-top:22px">Level up while you're here</h2>
-      <p>
-        <a class="btn" href="https://buy.stripe.com/6oU7sLcfMh1hbSb6CY3ks01" target="_blank" rel="noopener">$17 Viral Vault Flyers</a>
-        <a class="btn" href="https://buy.stripe.com/4gM8wPenU8uL4pJ2mI3ks03" target="_blank" rel="noopener">$37 Template Funnel Kit</a>
-      </p>
-    </div>
-  </div>
-</body>
-</html>
+      <p>This page <b>is</b> your delivery. Bookmark it so you can come back any time.</p>
+
+      <div class="badges">
+        <span class="badge">Instant Access</span>
+        <span class="badge">Licensed + Watermarked</span>
+        <span class="badge">Master Resell Rights (20% royalty)</span>
+      </div>
+
+      <div class="section">
+        <h2>Start Here</h2>
+        <ol>
+          <li>Read the license below (MRR with <b>20% royalty to AMJ</b> on any resales).</li>
+          <li>Do the Quick Actions — it’s a 15-minute win.</li>
+        </ol>
+        <a class="btn" href="#quick-actions">Jump to Quick Actions</a>
+      </div>
+
+      <div class="section">
+        <h2>What You Got</h2>
+        <ul style="margin:8px 0 0 20px
