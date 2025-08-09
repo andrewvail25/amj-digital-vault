@@ -8,7 +8,7 @@
   <style>
     :root{
       --bg:#0b0f14;--ink:#eaf2ff;--muted:#94a3b8;--card:#111826;--edge:#1f2a37;
-      --cta:#f59e0b;--cta-ink:#1a1302;--accent:#60a5fa;--ok:#34d399;--warn:#fca5a5
+      --cta:#f59e0b;--cta-ink:#1a1302;--accent:#60a5fa;--ok:#34d399
     }
     *{box-sizing:border-box}
     body{margin:0;font-family:Inter,system-ui,Arial;background:radial-gradient(1200px 600px at 20% 0%,#102235 0%,#0b0f14 40%),#0b0f14;color:var(--ink)}
@@ -33,7 +33,6 @@
     .trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:16px;font-size:12px;color:#b6c2d6}
     .badges{display:flex;gap:10px;flex-wrap:wrap}
     .badge{border:1px solid var(--edge);border-radius:999px;padding:6px 10px;font-weight:700;font-size:12px;background:#0f1520}
-    /* COUNTDOWN */
     .timer{margin-top:10px;font-weight:800}
     .timer b{color:var(--ok)}
     /* GRID */
@@ -43,7 +42,8 @@
     .card h3{margin:0 0 6px;font-size:20px}
     .price{color:var(--ok);font-weight:800;margin:6px 0 10px}
     .card p{color:var(--muted);margin:0 0 12px}
-    .card .cta{display:inline-block;background:var(--cta);color:var(--cta-ink);padding:10px 14px;border-radius:12px;font-weight:900;text-decoration:none}
+    .cta{display:inline-block;background:var(--cta);color:var(--cta-ink);padding:10px 14px;border-radius:12px;font-weight:900;text-decoration:none}
+    .subcta{display:inline-block;margin-left:10px;font-size:13px;color:#c7d2fe;text-decoration:underline}
     .ribbon{position:absolute;top:12px;right:-36px;background:var(--cta);color:var(--cta-ink);padding:6px 50px;font-weight:900;font-size:12px;transform:rotate(45deg);box-shadow:0 2px 4px rgba(0,0,0,.35)}
     /* PROOF */
     .proof{display:grid;gap:16px;margin-top:22px}
@@ -53,7 +53,6 @@
     .check{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
     .check b{color:var(--ok)}
     .quote{font-style:italic;color:#cbd5e1}
-    /* FOOTER */
     footer{margin:26px 0 8px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap}
   </style>
 </head>
@@ -63,8 +62,8 @@
       <div class="brand">AMJ Digital Vault</div>
       <nav class="nav">
         <a href="/purchases.html">All Products</a>
+        <a href="#products">Products</a>
         <a href="#how-it-works">How it works</a>
-        <a href="#proof">Proof</a>
       </nav>
     </header>
 
@@ -90,66 +89,66 @@
       </div>
     </section>
 
-    <!-- PRODUCTS -->
+    <!-- PRODUCTS (Buy Now = Stripe, More details = product page) -->
     <section id="products" class="grid">
-      <!-- $7 -->
       <article class="card">
         <h3>Mini Vault Sample Pack</h3>
         <div class="price">$7</div>
         <p>Quick preview of the Vault: plug-and-play assets to get momentum today.</p>
-        <a class="cta" href="/mini-vault-sample-pack.html">View Details</a>
+        <a class="cta" href="https://buy.stripe.com/7sY9AT0x4h1he0je5q3ks00" target="_blank" rel="noopener">Buy Now</a>
+        <a class="subcta" href="/mini-vault-sample-pack.html">More details</a>
       </article>
 
-      <!-- $17 -->
       <article class="card">
         <h3>Viral Vault Flyers</h3>
         <div class="price">$17</div>
         <p>High-converting flyer templates. Edit, export, post — done.</p>
-        <a class="cta" href="/viral-vault-flyers.html">View Details</a>
+        <a class="cta" href="https://buy.stripe.com/6oU7sLcfMh1hbSb6CY3ks01" target="_blank" rel="noopener">Buy Now</a>
+        <a class="subcta" href="/viral-vault-flyers.html">More details</a>
       </article>
 
-      <!-- $27 -->
       <article class="card">
         <h3>Niche Printable Vault</h3>
         <div class="price">$27</div>
         <p>Commercial-use printables in profitable niches. Brand and list fast.</p>
-        <a class="cta" href="/niche-printable-vault.html">View Details</a>
+        <a class="cta" href="https://buy.stripe.com/9B6dR96Vs12j6xR4uQ3ks02" target="_blank" rel="noopener">Buy Now</a>
+        <a class="subcta" href="/niche-printable-vault.html">More details</a>
       </article>
 
-      <!-- $37 -->
       <article class="card">
         <h3>Template Funnel Kit</h3>
         <div class="price">$37</div>
         <p>Drop-in sections + copy prompts to ship landing pages that convert.</p>
-        <a class="cta" href="/template-funnel-kit.html">View Details</a>
+        <a class="cta" href="https://buy.stripe.com/4gM8wPenU8uL4pJ2mI3ks03" target="_blank" rel="noopener">Buy Now</a>
+        <a class="subcta" href="/template-funnel-kit.html">More details</a>
       </article>
 
-      <!-- $97 -->
       <article class="card">
         <div class="ribbon">MOST POPULAR</div>
         <h3>Reseller Flash Funnel Pack</h3>
         <div class="price">$97</div>
         <p>Plug-and-sell funnel. Launch in under 48 hours, keep the profits (we track 20% royalty).</p>
-        <a class="cta" href="/reseller-flash-funnel-pack.html">View Details</a>
+        <a class="cta" href="https://buy.stripe.com/00w9ATcfM26nf4n2mI3ks06" target="_blank" rel="noopener">Buy Now</a>
+        <a class="subcta" href="/reseller-flash-funnel-pack.html">More details</a>
       </article>
 
-      <!-- $997 -->
       <article class="card">
         <h3>Done-For-You Digital Business Launch Kit</h3>
         <div class="price">$997</div>
         <p>Skip the learning curve. Complete system with pages, copy, delivery, and SOPs.</p>
-        <a class="cta" href="/dfy-digital-business-launch-kit.html">View Details</a>
+        <a class="cta" href="https://buy.stripe.com/eVqcN54Nkh1hf4n7H23ks0a" target="_blank" rel="noopener">Buy Now</a>
+        <a class="subcta" href="/dfy-digital-business-launch-kit.html">More details</a>
       </article>
     </section>
 
-    <!-- PROOF + HOW IT WORKS -->
-    <section id="proof" class="proof">
+    <!-- HOW IT WORKS / PROOF -->
+    <section id="how-it-works" class="proof">
       <div class="panel">
         <h4>How it works</h4>
-        <div class="check"><b>1.</b> Pick a product and checkout with Stripe.</div>
-        <div class="check"><b>2.</b> You’re auto-redirected to your **Thank-You** page for instant delivery.</div>
-        <div class="check"><b>3.</b> Files are licensed + watermarked to you. (Anti-leak, pro-profit.)</div>
-        <div class="check"><b>4.</b> Want to resell? Grab a license and keep the profits — we track 20% royalty automatically.</div>
+        <div class="check"><b>1.</b> Click <em>Buy Now</em> — secure Stripe checkout.</div>
+        <div class="check"><b>2.</b> After payment you’re auto-redirected to the Thank-You page.</div>
+        <div class="check"><b>3.</b> Download instantly — files are licensed + watermarked.</div>
+        <div class="check"><b>4.</b> Want to resell? Use your license; we track a 20% royalty to AMJ.</div>
       </div>
       <div class="panel">
         <h4>What buyers say</h4>
