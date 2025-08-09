@@ -1,46 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Mini Vault Sample Pack – Download</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini Vault Sample Pack</title>
   <style>
-    body {
-      background-color: #fefefe;
-      color: #222;
-      font-family: 'Segoe UI', sans-serif;
-      text-align: center;
-      padding: 60px 20px;
-    }
-    h1 {
-      font-size: 2.4rem;
-      color: #222;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-    }
-    a.download {
-      display: inline-block;
-      background-color: #007bff;
-      color: #fff;
-      text-decoration: none;
-      padding: 12px 24px;
-      font-size: 1rem;
-      border-radius: 8px;
-    }
-    a.download:hover {
-      background-color: #0056b3;
-    }
+    :root{--bg:#0b0f14;--card:#121923;--ink:#eaf2ff;--muted:#94a3b8;--accent:#22d3ee}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,Arial;background:var(--bg);color:var(--ink)}
+    .wrap{max-width:860px;margin:0 auto;padding:20px}
+    .card{background:linear-gradient(180deg,#121923,#0f141b);border:1px solid #223;box-shadow:0 10px 30px rgba(0,0,0,.35);border-radius:16px;padding:28px}
+    h1{margin:0 0 6px;font-size:28px} p{color:var(--muted);line-height:1.6}
+    .price{font-size:20px;margin:12px 0 20px;color:#c7d2fe}
+    .cta{display:inline-block;padding:14px 20px;border-radius:12px;text-decoration:none;background:var(--accent);color:#00222a;font-weight:700}
+    .cta:hover{filter:brightness(1.05)} .fine{font-size:12px;color:var(--muted);margin-top:10px}
+    ul{margin:10px 0 0 18px}
   </style>
 </head>
 <body>
-  <h1>Thank You for Your Purchase!</h1>
-  <p>You’ve unlocked the <strong>Mini Vault Sample Pack</strong> 🎉</p>
-  <p>Click below to download your digital product:</p>
-  <a class="download" href="https://amjdigitalvault.com/delivery/mini-vault-sample.zip" target="_blank" download>
-    Download Now
-  </a>
+  <div class="wrap">
+    <div class="card">
+      <h1>Mini Vault Sample Pack</h1>
+      <p class="price">Display price: <strong>$7</strong> (final price shown on Stripe)</p>
+      <p>Get a taste of the full system: plug-and-play templates and assets you can use today.</p>
+      <ul>
+        <li>5+ ready files/templates</li>
+        <li>Quick start guide</li>
+        <li>Instant delivery</li>
+      </ul>
+      <p>
+        <a class="cta" href="https://buy.stripe.com/7sY9AT0x4h1he0je5q3ks00" target="_blank" rel="noopener">Buy for $7</a>
+      </p>
+      <p class="fine">Stripe shows the official price and handles checkout securely.</p>
+    </div>
+  </div>
 </body>
 </html>
