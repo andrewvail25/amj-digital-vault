@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>AMJ Digital Vault — Launch Faster. Earn Sooner.</title>
-  <meta name="description" content="Done-for-you digital products, funnels, and assets. Buy today, launch today." />
+  <meta name="description" content="Done-for-you digital products, funnels, and assets. Buy today, launch today. Master Resell Rights with 20% royalty tracking." />
   <style>
     :root{
       --bg:#0b0f14;--ink:#eaf2ff;--muted:#94a3b8;--card:#111826;--edge:#1f2a37;
@@ -18,6 +18,7 @@
     .brand{display:flex;gap:10px;align-items:center;font-weight:900;letter-spacing:.3px}
     .nav a{opacity:.85;margin-left:14px;text-decoration:none}
     .nav a:hover{opacity:1}
+
     /* HERO */
     .hero{position:relative;overflow:hidden;border:1px solid var(--edge);border-radius:18px;background:
       radial-gradient(800px 400px at 0% 0%,rgba(96,165,250,.12),transparent 60%),
@@ -35,6 +36,7 @@
     .badge{border:1px solid var(--edge);border-radius:999px;padding:6px 10px;font-weight:700;font-size:12px;background:#0f1520}
     .timer{margin-top:10px;font-weight:800}
     .timer b{color:var(--ok)}
+
     /* GRID */
     .grid{display:grid;gap:16px;margin-top:22px}
     @media (min-width:760px){.grid{grid-template-columns:repeat(2,1fr)}}
@@ -42,9 +44,34 @@
     .card h3{margin:0 0 6px;font-size:20px}
     .price{color:var(--ok);font-weight:800;margin:6px 0 10px}
     .card p{color:var(--muted);margin:0 0 12px}
-    .cta{display:inline-block;background:var(--cta);color:var(--cta-ink);padding:10px 14px;border-radius:12px;font-weight:900;text-decoration:none}
-    .subcta{display:inline-block;margin-left:10px;font-size:13px;color:#c7d2fe;text-decoration:underline}
+
+    /* FULL-WIDTH BUY BUTTONS ON CARDS */
+    .card .cta{
+      display:block;
+      width:100%;
+      text-align:center;
+      padding:14px 16px;
+      margin:8px 0 4px 0;
+      border-radius:14px;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.02em;
+      background:var(--cta);
+      color:var(--cta-ink);
+      text-decoration:none;
+    }
+    .card .cta:active{transform:translateY(1px)}
+    .card .subcta{
+      display:block;
+      text-align:center;
+      margin-top:2px;
+      font-size:13px;
+      color:#c7d2fe;
+      text-decoration:underline;
+    }
+
     .ribbon{position:absolute;top:12px;right:-36px;background:var(--cta);color:var(--cta-ink);padding:6px 50px;font-weight:900;font-size:12px;transform:rotate(45deg);box-shadow:0 2px 4px rgba(0,0,0,.35)}
+
     /* PROOF */
     .proof{display:grid;gap:16px;margin-top:22px}
     @media (min-width:900px){.proof{grid-template-columns:1.2fr .8fr;align-items:stretch}}
@@ -54,6 +81,15 @@
     .check b{color:var(--ok)}
     .quote{font-style:italic;color:#cbd5e1}
     footer{margin:26px 0 8px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap}
+
+    /* STICKY MOBILE CTA */
+    .sticky-cta{position:fixed;left:0;right:0;bottom:10px;display:none;z-index:40}
+    .sticky-cta .inner{max-width:1120px;margin:0 auto;padding:0 24px}
+    .sticky-cta a{display:block;text-align:center;background:var(--cta);color:var(--cta-ink);font-weight:900;padding:14px;border-radius:16px;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    @media (max-width:760px){.sticky-cta{display:block} body{padding-bottom:84px}}
+
+    /* Smooth scroll */
+    html{scroll-behavior:smooth}
   </style>
 </head>
 <body>
@@ -82,15 +118,16 @@
             <span class="badge">Secure Stripe Checkout</span>
             <span class="badge">Instant Access</span>
             <span class="badge">Licensed + Watermarked</span>
-            <span class="badge">Resell Rights Available</span>
+            <span class="badge">Resell Rights (20% royalty)</span>
           </div>
           <div class="timer">Launch bonus ends in <b id="cd">72:00:00</b></div>
         </div>
       </div>
     </section>
 
-    <!-- PRODUCTS (Buy Now = Stripe, More details = product page) -->
+    <!-- PRODUCTS -->
     <section id="products" class="grid">
+
       <article class="card">
         <h3>Mini Vault Sample Pack</h3>
         <div class="price">$7</div>
@@ -147,7 +184,7 @@
         <h4>How it works</h4>
         <div class="check"><b>1.</b> Click <em>Buy Now</em> — secure Stripe checkout.</div>
         <div class="check"><b>2.</b> After payment you’re auto-redirected to the Thank-You page.</div>
-        <div class="check"><b>3.</b> Download instantly — files are licensed + watermarked.</div>
+        <div class="check"><b>3.</b> Delivery page is instant — product content is on the page.</div>
         <div class="check"><b>4.</b> Want to resell? Use your license; we track a 20% royalty to AMJ.</div>
       </div>
       <div class="panel">
@@ -162,6 +199,11 @@
       <span>© 2025 AMJ Digital Vault</span>
       <span>Secure Stripe • Instant Access • Licensed</span>
     </footer>
+  </div>
+
+  <!-- Sticky mobile CTA -->
+  <div class="sticky-cta">
+    <div class="inner"><a href="#products">Buy Now — See Products</a></div>
   </div>
 
   <script>
