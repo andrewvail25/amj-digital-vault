@@ -1,28 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Thank You — Template Funnel Kit</title>
   <style>
-    :root{--bg:#0b0f14;--card:#121923;--ink:#eaf2ff;--muted:#94a3b8;--accent:#60a5fa}
-    *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,Arial;background:var(--bg);color:var(--ink)}
-    .wrap{max-width:860px;margin:0 auto;padding:20px}
-    .card{background:linear-gradient(180deg,#121923,#0f141b);border:1px solid #223;box-shadow:0 10px 30px rgba(0,0,0,.35);border-radius:16px;padding:28px}
-    h1{margin:0 0 6px;font-size:28px} p{color:var(--muted);line-height:1.6}
-    .btn{display:inline-block;padding:12px 16px;border-radius:12px;text-decoration:none;background:var(--accent);color:#00122b;font-weight:700;margin:6px 8px 0 0}
+    :root{--bg:#0b0f14;--card:#121923;--ink:#eaf2ff;--muted:#94a3b8;--edge:#223;--cta:#f472b6;--cta-ink:#2b0f18}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,Arial}
+    .wrap{max-width:880px;margin:0 auto;padding:22px}
+    .card{background:linear-gradient(180deg,#121923,#0f141b);border:1px solid var(--edge);border-radius:16px;padding:26px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    h1{margin:0 0 8px;font-size:28px} p{color:var(--muted);line-height:1.55}
+    .section{margin-top:18px;padding:16px;border:1px solid var(--edge);border-radius:12px;background:#0f1622}
+    .btn{display:inline-block;margin-top:10px;background:var(--cta);color:var(--cta-ink);padding:12px 16px;border-radius:12px;font-weight:800;text-decoration:none}
+    .badges{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+    .badge{border:1px solid var(--edge);border-radius:999px;padding:6px 10px;font-size:12px;background:#0e1520}
+    .upsells{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .up{background:#34d399;color:#06281d}
+    pre{white-space:pre-wrap;line-height:1.45;margin:0;color:#dbe5ff;background:#0b1220;padding:12px;border-radius:10px;border:1px solid #1b2432}
+    ul{margin:8px 0 0 20px}
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="card">
-      <h1>Funnel pieces delivered. ✅</h1>
-      <p>Download your Template Funnel Kit below. Save this page.</p>
-      <p><a class="btn" href="<!-- TODO: paste delivery link for Template Funnel Kit -->" target="_blank" rel="noopener">Download Funnel Kit</a></p>
-      <h2 style="margin-top:22px">Perfect next steps:</h2>
-      <p>
-        <a class="btn" href="https://buy.stripe.com/00w9ATcfM26nf4n2mI3ks06" target="_blank" rel="noopener">$97 Reseller Flash Funnel Pack</a>
-        <a class="btn" href="https://buy.stripe.com/eVqcN54Nkh1hf4n7H23ks0a" target="_blank" rel="noopener">$997 DFY Digital Business Launch Kit</a>
-      </p>
+      <h1>You're in. ✅</h1>
+      <p>This is your delivery page — bookmark it to keep access forever.</p>
+
+      <div class="badges">
+        <span class="badge">Commercial Use</span>
+        <span class="badge">Master Resell Rights</span>
+        <span class="badge">20% Royalty</span>
+      </div>
+
+      <div class="section">
+        <h2>Start Here</h2>
+        <ul>
+          <li>Review the license — all sales require 20% royalty to AMJ.</li>
+          <li>Import these templates to your funnel builder.</li>
+          <li>Swap branding, products, and links.</li>
+        </ul>
+        <p style="margin-top:8px">Support: <a href="mailto:hello@amjdigitalvault.com">hello@amjdigitalvault.com</a></p>
+      </div>
+
+      <div class="section">
+        <h2>Master Resell License</h2>
+        <pre>
+MASTER RESELL LICENSE (Template Funnel Kit)
+• You may resell with 20% royalty per sale to AMJ.
+• You may edit branding but cannot remove built-in tracking/watermarks.
+• License is void if redistributed without authorization or royalty reporting.
+        </pre>
+      </div>
+
+      <div class="section">
+        <h2>Download Files</h2>
+        <p><a class="btn" href="https://your-download-link-here.com" target="_blank" rel="noopener">Download Funnel Kit</a></p>
+      </div>
+
+      <h2 style="margin-top:22px">Next step people take:</h2>
+      <div class="upsells">
+        <a class="btn up" href="https://buy.stripe.com/00w9ATcfM26nf4n2mI3ks06" target="_blank" rel="noopener">$97 Reseller Flash Funnel Pack</a>
+        <a class="btn up" href="https://buy.stripe.com/14k8wPenU3kr7cQ4gl3ks08" target="_blank" rel="noopener">$497 Vault Key License</a>
+      </div>
     </div>
   </div>
 </body>
