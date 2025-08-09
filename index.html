@@ -1,199 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AMJ Digital Vault – Exclusive Offers</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0e0e0e;
-      color: #f1f1f1;
-      margin: 0;
-      padding: 0;
-    }
+<!-- PRODUCTS GRID — matches your product + thank-you files -->
+<section style="max-width:1000px;margin:0 auto;padding:24px">
+  <div style="display:grid;gap:16px">
+    <!-- $7 -->
+    <a href="/mini-vault-sample-pack.html" style="display:block;padding:18px;border-radius:14px;background:linear-gradient(180deg,#121923,#0f141b);border:1px solid #223;text-decoration:none;color:#eaf2ff">
+      <div style="font-weight:800;font-size:20px">Mini Vault Sample Pack</div>
+      <div style="color:#34d399;margin:6px 0">$7</div>
+      <div>Quick preview of the Digital Vault system with plug-and-play assets.</div>
+      <div style="margin-top:12px"><span style="background:#f59e0b;color:#1a1302;padding:10px 16px;border-radius:12px;font-weight:800">Buy Now</span></div>
+    </a>
 
-    header {
-      background-color: #111;
-      padding: 30px 20px;
-      text-align: center;
-      border-bottom: 2px solid #0070f3;
-    }
+    <!-- $17 -->
+    <a href="/viral-vault-flyers.html" style="display:block;padding:18px;border-radius:14px;background:linear-gradient(180deg,#121923,#0f141b);border:1px solid #223;text-decoration:none;color:#eaf2ff">
+      <div style="font-weight:800;font-size:20px">Viral Vault Flyers</div>
+      <div style="color:#34d399;margin:6px 0">$17</div>
+      <div>High-converting flyer templates—edit, export, and post fast.</div>
+      <div style="margin-top:12px"><span style="background:#f59e0b;color:#1a1302;padding:10px 16px;border-radius:12px;font-weight:800">Buy Now</span></div>
+    </a>
 
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-      color: #00b7ff;
-      letter-spacing: 1px;
-    }
+    <!-- $27 -->
+    <a href="/niche-printable-vault.html" style="display:block;padding:18px;border-radius:14px;background:linear-gradient(180deg,#121923,#0f141b);border:1px solid #223;text-decoration:none;color:#eaf2ff">
+      <div style="font-weight:800;font-size:20px">Niche Printable Vault</div>
+      <div style="color:#34d399;margin:6px 0">$27</div>
+      <div>Commercial-use printables in profitable niches. Brand and sell.</div>
+      <div style="margin-top:12px"><span style="background:#f59e0b;color:#1a1302;padding:10px 16px;border-radius:12px;font-weight:800">Buy Now</span></div>
+    </a>
 
-    .nav-mini {
-      margin-top: 8px;
-      font-size: 14px;
-    }
-    .nav-mini a {
-      color: #9ad7ff;
-      text-decoration: underline;
-    }
+    <!-- $37 -->
+    <a href="/template-funnel-kit.html" style="display:block;padding:18px;border-radius:14px;background:linear-gradient(180deg,#121923,#0f141b);border:1px solid #223;text-decoration:none;color:#eaf2ff">
+      <div style="font-weight:800;font-size:20px">Template Funnel Kit</div>
+      <div style="color:#34d399;margin:6px 0">$37</div>
+      <div>Drop-in funnel sections + copy prompts for pages that convert.</div>
+      <div style="margin-top:12px"><span style="background:#f59e0b;color:#1a1302;padding:10px 16px;border-radius:12px;font-weight:800">Buy Now</span></div>
+    </a>
 
-    main {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
+    <!-- $97 -->
+    <a href="/reseller-flash-funnel-pack.html" style="display:block;padding:18px;border-radius:14px;background:linear-gradient(180deg,#121923,#0f141b);border:1px solid #223;text-decoration:none;color:#eaf2ff">
+      <div style="font-weight:800;font-size:20px">Reseller Flash Funnel Pack</div>
+      <div style="color:#34d399;margin:6px 0">$97</div>
+      <div>Plug-and-sell funnel. Launch in under 48 hours, keep 100%.</div>
+      <div style="margin-top:12px"><span style="background:#f59e0b;color:#1a1302;padding:10px 16px;border-radius:12px;font-weight:800">Buy Now</span></div>
+    </a>
 
-    .offer {
-      background: #1c1c1c;
-      padding: 25px;
-      margin-bottom: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 12px rgba(0, 183, 255, 0.2);
-      position: relative;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .offer:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 15px rgba(0, 183, 255, 0.4);
-    }
-
-    .offer h2 {
-      font-size: 24px;
-      color: #00b7ff;
-      margin-top: 0;
-    }
-
-    .offer .price {
-      font-size: 18px;
-      color: #39e09b;
-      font-weight: bold;
-      margin: 10px 0;
-    }
-
-    .offer p {
-      font-size: 15px;
-      color: #ccc;
-      margin-bottom: 20px;
-    }
-
-    /* Gold–orange Buy Now buttons */
-    .offer button {
-      background-color: #FFA500; /* gold-orange */
-      color: #000;
-      padding: 14px 26px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 17px;
-      font-weight: bold;
-      box-shadow: 0 0 10px rgba(255,165,0,0.7);
-      transition: transform 0.2s, background-color 0.2s;
-      width: 100%;
-    }
-    .offer button:hover {
-      background-color: #ff8c00;
-      transform: scale(1.05);
-    }
-
-    /* MOST POPULAR badge + highlight */
-    .badge {
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      background-color: #FFA500;
-      color: #000;
-      padding: 5px 10px;
-      font-size: 12px;
-      font-weight: bold;
-      border-radius: 5px;
-      box-shadow: 0 0 8px rgba(255,165,0,0.6);
-    }
-    .highlight {
-      border: 2px solid #FFA500;
-      box-shadow: 0 0 20px rgba(255,165,0,0.6);
-      transform: scale(1.05);
-    }
-    .highlight::before {
-      content: "";
-      position: absolute;
-      inset: -6px;
-      border-radius: 12px;
-      pointer-events: none;
-      box-shadow: 0 0 0 0 rgba(255,165,0,0.35);
-      animation: pulseGlow 2.4s ease-in-out infinite;
-    }
-    @keyframes pulseGlow {
-      0%   { box-shadow: 0 0 0 0 rgba(255,165,0,0.35); }
-      50%  { box-shadow: 0 0 24px 6px rgba(255,165,0,0.55); }
-      100% { box-shadow: 0 0 0 0 rgba(255,165,0,0.35); }
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 10px;
-      color: #777;
-      font-size: 13px;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>AMJ Digital Vault</h1>
-    <div class="nav-mini">
-      <a href="/purchases.html">My Purchases</a>
-    </div>
-  </header>
-
-  <main>
-    <h2 style="text-align:center; margin-bottom: 40px;">Choose Your Offer Below</h2>
-
-    <div class="offer">
-      <h2>Mini Vault Sample Pack</h2>
-      <p class="price">$7</p>
-      <p>Get a quick preview of the digital vault system.</p>
-      <button onclick="location.href='https://buy.stripe.com/7sY9AT0x4h1he0je5q3ks00'">Buy Now</button>
-    </div>
-
-    <div class="offer">
-      <h2>Hustler's Toolkit</h2>
-      <p class="price">$17</p>
-      <p>Quick tools to get you started fast with automation and monetization.</p>
-      <button onclick="location.href='https://buy.stripe.com/6oU7sLcfMh1hbSb6CY3ks01'">Buy Now</button>
-    </div>
-
-    <div class="offer">
-      <h2>Affiliate Magnet Kit</h2>
-      <p class="price">$27</p>
-      <p>Templates and strategies to make affiliate commissions like clockwork.</p>
-      <button onclick="location.href='https://buy.stripe.com/9B6dR96Vs12j6xR4uQ3ks02'">Buy Now</button>
-    </div>
-
-    <div class="offer">
-      <h2>Fast Stack Starter Vault</h2>
-      <p class="price">$37</p>
-      <p>A plug-and-play business kit to sell digital products instantly.</p>
-      <button onclick="location.href='https://buy.stripe.com/4gM8wPenU8uL4pJ2mI3ks03'">Buy Now</button>
-    </div>
-
-    <div class="offer highlight">
-      <span class="badge">MOST POPULAR</span>
-      <h2>Quick Launch System</h2>
-      <p class="price">$97</p>
-      <p>Launch your digital business with this rapid setup system.</p>
-      <button onclick="location.href='https://buy.stripe.com/00w9ATcfM26nf4n2mI3ks06'">Buy Now</button>
-    </div>
-
-    <div class="offer">
-      <h2>Done-For-You Vault Launch</h2>
-      <p class="price">$997</p>
-      <p>The complete digital vault system, launched for you with everything done.</p>
-      <button onclick="location.href='https://buy.stripe.com/eVqcN54Nkh1hf4n7H23ks0a'">Buy Now</button>
-    </div>
-  </main>
-
-  <footer>
-    &copy; 2025 AMJ Digital Vault. All rights reserved.
-  </footer>
-
-</body>
-</html>
+    <!-- $997 -->
+    <a href="/dfy-digital-business-launch-kit.html" style="display:block;padding:18px;border-radius:14px;background:linear-gradient(180deg,#121923,#0f141b);border:1px solid #223;text-decoration:none;color:#eaf2ff">
+      <div style="font-weight:800;font-size:20px">Done-For-You Digital Business Launch Kit</div>
+      <div style="color:#34d399;margin:6px 0">$997</div>
+      <div>Complete vault system, launched for you with everything done.</div>
+      <div style="margin-top:12px"><span style="background:#f59e0b;color:#1a1302;padding:10px 16px;border-radius:12px;font-weight:800">Buy Now</span></div>
+    </a>
+  </div>
+</section>
