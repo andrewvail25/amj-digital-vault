@@ -1,52 +1,191 @@
-<!-- PRODUCTS GRID — matches your product + thank-you files -->
-<section style="max-width:1000px;margin:0 auto;padding:24px">
-  <div style="display:grid;gap:16px">
-    <!-- $7 -->
-    <a href="/mini-vault-sample-pack.html" style="display:block;padding:18px;border-radius:14px;background:linear-gradient(180deg,#121923,#0f141b);border:1px solid #223;text-decoration:none;color:#eaf2ff">
-      <div style="font-weight:800;font-size:20px">Mini Vault Sample Pack</div>
-      <div style="color:#34d399;margin:6px 0">$7</div>
-      <div>Quick preview of the Digital Vault system with plug-and-play assets.</div>
-      <div style="margin-top:12px"><span style="background:#f59e0b;color:#1a1302;padding:10px 16px;border-radius:12px;font-weight:800">Buy Now</span></div>
-    </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AMJ Digital Vault — Launch Faster. Earn Sooner.</title>
+  <meta name="description" content="Done-for-you digital products, funnels, and assets. Buy today, launch today." />
+  <style>
+    :root{
+      --bg:#0b0f14;--ink:#eaf2ff;--muted:#94a3b8;--card:#111826;--edge:#1f2a37;
+      --cta:#f59e0b;--cta-ink:#1a1302;--accent:#60a5fa;--ok:#34d399;--warn:#fca5a5
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Arial;background:radial-gradient(1200px 600px at 20% 0%,#102235 0%,#0b0f14 40%),#0b0f14;color:var(--ink)}
+    a{color:inherit}
+    .wrap{max-width:1120px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:900;letter-spacing:.3px}
+    .nav a{opacity:.85;margin-left:14px;text-decoration:none}
+    .nav a:hover{opacity:1}
+    /* HERO */
+    .hero{position:relative;overflow:hidden;border:1px solid var(--edge);border-radius:18px;background:
+      radial-gradient(800px 400px at 0% 0%,rgba(96,165,250,.12),transparent 60%),
+      linear-gradient(180deg,#0f1724,#0e1420)}
+    .hero-inner{padding:34px 22px 24px}
+    .kicker{color:#c7d2fe;font-weight:800;font-size:12px;letter-spacing:.15em;text-transform:uppercase}
+    .h1{font-size:34px;line-height:1.13;margin:8px 0 6px;font-weight:900}
+    .sub{color:var(--muted);max-width:780px}
+    .hero-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+    .btn{display:inline-block;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:800}
+    .btn-primary{background:var(--cta);color:var(--cta-ink)}
+    .btn-outline{border:1px solid var(--edge);background:rgba(255,255,255,.02)}
+    .trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:16px;font-size:12px;color:#b6c2d6}
+    .badges{display:flex;gap:10px;flex-wrap:wrap}
+    .badge{border:1px solid var(--edge);border-radius:999px;padding:6px 10px;font-weight:700;font-size:12px;background:#0f1520}
+    /* COUNTDOWN */
+    .timer{margin-top:10px;font-weight:800}
+    .timer b{color:var(--ok)}
+    /* GRID */
+    .grid{display:grid;gap:16px;margin-top:22px}
+    @media (min-width:760px){.grid{grid-template-columns:repeat(2,1fr)}}
+    .card{position:relative;border:1px solid var(--edge);background:linear-gradient(180deg,#111826,#0e1420);border-radius:16px;padding:18px}
+    .card h3{margin:0 0 6px;font-size:20px}
+    .price{color:var(--ok);font-weight:800;margin:6px 0 10px}
+    .card p{color:var(--muted);margin:0 0 12px}
+    .card .cta{display:inline-block;background:var(--cta);color:var(--cta-ink);padding:10px 14px;border-radius:12px;font-weight:900;text-decoration:none}
+    .ribbon{position:absolute;top:12px;right:-36px;background:var(--cta);color:var(--cta-ink);padding:6px 50px;font-weight:900;font-size:12px;transform:rotate(45deg);box-shadow:0 2px 4px rgba(0,0,0,.35)}
+    /* PROOF */
+    .proof{display:grid;gap:16px;margin-top:22px}
+    @media (min-width:900px){.proof{grid-template-columns:1.2fr .8fr;align-items:stretch}}
+    .panel{border:1px solid var(--edge);background:linear-gradient(180deg,#111826,#0e1420);border-radius:16px;padding:18px}
+    .panel h4{margin:0 0 8px}
+    .check{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
+    .check b{color:var(--ok)}
+    .quote{font-style:italic;color:#cbd5e1}
+    /* FOOTER */
+    footer{margin:26px 0 8px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">AMJ Digital Vault</div>
+      <nav class="nav">
+        <a href="/purchases.html">All Products</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#proof">Proof</a>
+      </nav>
+    </header>
 
-    <!-- $17 -->
-    <a href="/viral-vault-flyers.html" style="display:block;padding:18px;border-radius:14px;background:linear-gradient(180deg,#121923,#0f141b);border:1px solid #223;text-decoration:none;color:#eaf2ff">
-      <div style="font-weight:800;font-size:20px">Viral Vault Flyers</div>
-      <div style="color:#34d399;margin:6px 0">$17</div>
-      <div>High-converting flyer templates—edit, export, and post fast.</div>
-      <div style="margin-top:12px"><span style="background:#f59e0b;color:#1a1302;padding:10px 16px;border-radius:12px;font-weight:800">Buy Now</span></div>
-    </a>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="kicker">Launch today</div>
+        <div class="h1">Done-for-you digital products that start selling <u>now</u>.</div>
+        <p class="sub">No coding. No design rabbit holes. Buy, plug in your name, and you’re live. Every purchase redirects to instant delivery. Resell rights baked in with 20% royalty tracking.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#products">Shop the Vault</a>
+          <a class="btn btn-outline" href="/dfy-digital-business-launch-kit.html">Go DFY ($997)</a>
+        </div>
+        <div class="trust">
+          <div class="badges">
+            <span class="badge">Secure Stripe Checkout</span>
+            <span class="badge">Instant Access</span>
+            <span class="badge">Licensed + Watermarked</span>
+            <span class="badge">Resell Rights Available</span>
+          </div>
+          <div class="timer">Launch bonus ends in <b id="cd">72:00:00</b></div>
+        </div>
+      </div>
+    </section>
 
-    <!-- $27 -->
-    <a href="/niche-printable-vault.html" style="display:block;padding:18px;border-radius:14px;background:linear-gradient(180deg,#121923,#0f141b);border:1px solid #223;text-decoration:none;color:#eaf2ff">
-      <div style="font-weight:800;font-size:20px">Niche Printable Vault</div>
-      <div style="color:#34d399;margin:6px 0">$27</div>
-      <div>Commercial-use printables in profitable niches. Brand and sell.</div>
-      <div style="margin-top:12px"><span style="background:#f59e0b;color:#1a1302;padding:10px 16px;border-radius:12px;font-weight:800">Buy Now</span></div>
-    </a>
+    <!-- PRODUCTS -->
+    <section id="products" class="grid">
+      <!-- $7 -->
+      <article class="card">
+        <h3>Mini Vault Sample Pack</h3>
+        <div class="price">$7</div>
+        <p>Quick preview of the Vault: plug-and-play assets to get momentum today.</p>
+        <a class="cta" href="/mini-vault-sample-pack.html">View Details</a>
+      </article>
 
-    <!-- $37 -->
-    <a href="/template-funnel-kit.html" style="display:block;padding:18px;border-radius:14px;background:linear-gradient(180deg,#121923,#0f141b);border:1px solid #223;text-decoration:none;color:#eaf2ff">
-      <div style="font-weight:800;font-size:20px">Template Funnel Kit</div>
-      <div style="color:#34d399;margin:6px 0">$37</div>
-      <div>Drop-in funnel sections + copy prompts for pages that convert.</div>
-      <div style="margin-top:12px"><span style="background:#f59e0b;color:#1a1302;padding:10px 16px;border-radius:12px;font-weight:800">Buy Now</span></div>
-    </a>
+      <!-- $17 -->
+      <article class="card">
+        <h3>Viral Vault Flyers</h3>
+        <div class="price">$17</div>
+        <p>High-converting flyer templates. Edit, export, post — done.</p>
+        <a class="cta" href="/viral-vault-flyers.html">View Details</a>
+      </article>
 
-    <!-- $97 -->
-    <a href="/reseller-flash-funnel-pack.html" style="display:block;padding:18px;border-radius:14px;background:linear-gradient(180deg,#121923,#0f141b);border:1px solid #223;text-decoration:none;color:#eaf2ff">
-      <div style="font-weight:800;font-size:20px">Reseller Flash Funnel Pack</div>
-      <div style="color:#34d399;margin:6px 0">$97</div>
-      <div>Plug-and-sell funnel. Launch in under 48 hours, keep 100%.</div>
-      <div style="margin-top:12px"><span style="background:#f59e0b;color:#1a1302;padding:10px 16px;border-radius:12px;font-weight:800">Buy Now</span></div>
-    </a>
+      <!-- $27 -->
+      <article class="card">
+        <h3>Niche Printable Vault</h3>
+        <div class="price">$27</div>
+        <p>Commercial-use printables in profitable niches. Brand and list fast.</p>
+        <a class="cta" href="/niche-printable-vault.html">View Details</a>
+      </article>
 
-    <!-- $997 -->
-    <a href="/dfy-digital-business-launch-kit.html" style="display:block;padding:18px;border-radius:14px;background:linear-gradient(180deg,#121923,#0f141b);border:1px solid #223;text-decoration:none;color:#eaf2ff">
-      <div style="font-weight:800;font-size:20px">Done-For-You Digital Business Launch Kit</div>
-      <div style="color:#34d399;margin:6px 0">$997</div>
-      <div>Complete vault system, launched for you with everything done.</div>
-      <div style="margin-top:12px"><span style="background:#f59e0b;color:#1a1302;padding:10px 16px;border-radius:12px;font-weight:800">Buy Now</span></div>
-    </a>
+      <!-- $37 -->
+      <article class="card">
+        <h3>Template Funnel Kit</h3>
+        <div class="price">$37</div>
+        <p>Drop-in sections + copy prompts to ship landing pages that convert.</p>
+        <a class="cta" href="/template-funnel-kit.html">View Details</a>
+      </article>
+
+      <!-- $97 -->
+      <article class="card">
+        <div class="ribbon">MOST POPULAR</div>
+        <h3>Reseller Flash Funnel Pack</h3>
+        <div class="price">$97</div>
+        <p>Plug-and-sell funnel. Launch in under 48 hours, keep the profits (we track 20% royalty).</p>
+        <a class="cta" href="/reseller-flash-funnel-pack.html">View Details</a>
+      </article>
+
+      <!-- $997 -->
+      <article class="card">
+        <h3>Done-For-You Digital Business Launch Kit</h3>
+        <div class="price">$997</div>
+        <p>Skip the learning curve. Complete system with pages, copy, delivery, and SOPs.</p>
+        <a class="cta" href="/dfy-digital-business-launch-kit.html">View Details</a>
+      </article>
+    </section>
+
+    <!-- PROOF + HOW IT WORKS -->
+    <section id="proof" class="proof">
+      <div class="panel">
+        <h4>How it works</h4>
+        <div class="check"><b>1.</b> Pick a product and checkout with Stripe.</div>
+        <div class="check"><b>2.</b> You’re auto-redirected to your **Thank-You** page for instant delivery.</div>
+        <div class="check"><b>3.</b> Files are licensed + watermarked to you. (Anti-leak, pro-profit.)</div>
+        <div class="check"><b>4.</b> Want to resell? Grab a license and keep the profits — we track 20% royalty automatically.</div>
+      </div>
+      <div class="panel">
+        <h4>What buyers say</h4>
+        <p class="quote">“I bought, plugged in my name, and had a product selling the same day.”</p>
+        <p class="quote">“The $97 pack basically paid for itself in 48 hours.”</p>
+        <p style="color:var(--muted);font-size:12px;margin-top:10px">Real testimonials coming post-launch.</p>
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2025 AMJ Digital Vault</span>
+      <span>Secure Stripe • Instant Access • Licensed</span>
+    </footer>
   </div>
-</section>
+
+  <script>
+    // Simple 72h countdown from first visit
+    (function(){
+      const el=document.getElementById('cd');
+      if(!el) return;
+      const KEY='amj_cd_start';
+      let start=localStorage.getItem(KEY);
+      if(!start){ start=Date.now(); localStorage.setItem(KEY,start); }
+      start=parseInt(start,10);
+      const end=start+72*60*60*1000;
+      function fmt(n){return String(n).padStart(2,'0')}
+      function tick(){
+        const now=Date.now();
+        let s=Math.max(0,Math.floor((end-now)/1000));
+        const h=Math.floor(s/3600); s-=h*3600;
+        const m=Math.floor(s/60); s-=m*60;
+        el.textContent=`${fmt(h)}:${fmt(m)}:${fmt(s)}`;
+        requestAnimationFrame(()=>setTimeout(tick,500));
+      }
+      tick();
+    })();
+  </script>
+</body>
+</html>
