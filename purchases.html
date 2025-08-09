@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Purchases – AMJ Digital Vault</title>
+  <meta name="description" content="Access your AMJ Digital Vault purchases. Instant delivery. Licensed & watermarked."/>
+  <style>
+    :root{
+      --bg:#0e0e0e; --card:#1c1c1c; --stroke:#2a2a2a;
+      --gold:#ffb347; --gold2:#ff8c00; --text:#f1f1f1; --muted:#bdbdbd; --accent:#39e09b;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Segoe UI,system-ui,Arial,sans-serif}
+    header{position:sticky;top:0;z-index:5;background:#111;border-bottom:2px solid var(--gold);padding:18px}
+    .wrap{max-width:900px;margin:0 auto;padding:22px}
+    .brand{font-weight:800;color:var(--gold);text-align:center}
+    nav{text-align:center;margin-top:6px}
+    nav a{color:#9ad7ff;text-decoration:underline}
+    .sub{color:var(--muted);text-align:center;margin-top:12px}
+    .notice{display:none;margin:16px auto 0;max-width:900px;border:1px solid var(--accent);background:rgba(57,224,155,.08);padding:12px 14px;border-radius:10px;color:#caffdf;text-align:center}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:20px}
+    .card{grid-column:span 12;background:var(--card);border:1px solid var(--stroke);border-radius:12px;padding:18px;position:relative}
+    @media(min-width:760px){ .card{grid-column:span 6} }
+    .title{margin:0 0 6px;color:var(--gold);font-size:20px;font-weight:800}
+    .desc{margin:0 0 14px;color:#cfcfcf;font-size:14px}
+    .locked{position:absolute;top:12px;right:12px;background:#333;color:#eee;font-size:11px;padding:6px 8px;border-radius:999px;border:1px solid #444}
+    .unlocked{position:absolute;top:12px;right:12px;background:var(--gold);color:#000;font-size:11px;padding:6px 8px;border-radius:999px;border:1px solid rgba(0,0,0,.2);box-shadow:0 0 12px rgba(255,179,71,.5)}
+    .btn{display:inline-block;width:100%;text-align:center;padding:12px 16px;border-radius:8px;
+      background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;font-weight:800;text-decoration:none}
+    .btn[aria-disabled="true"]{opacity:.55;cursor:not-allowed}
+    .mini{margin-top:22px;color:#a5a5a5;font-size:12px;text-align:center}
+    footer{color:#9aa3ad;text-align:center;padding:28px 16px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">AMJ Digital Vault — My Purchases</div>
+    <nav><a href="/">← Back to Offers</a></nav>
+  </header>
+
+  <div id="success" class="notice">✅ Thank you! Your purchase has been added to your vault. Access is unlocked below.</div>
+
+  <div class="wrap">
+    <p class="sub">Instant delivery. Licensed & watermarked. Keep this page bookmarked for quick access.</p>
+
+    <div class="grid" id="cards"><!-- cards render here --></div>
+
+    <p class="mini">Need help? Email <a href="mailto:support@amjdigitalvault.com">support@amjdigitalvault.com</a></p>
+  </div>
+
+  <footer>© 2025 AMJ Digital Vault. All rights reserved.</footer>
+
+  <script>
+    // Product catalog (slugs must match Stripe success URLs)
+    const CATALOG = [
+      { slug:'sample',      name:"Mini Vault Sample Pack",   desc:"A fast taste of the system.",                     file:'/downloads/sample-pack.zip' },
+      { slug:'toolkit',     name:"Hustler\'s Toolkit",       desc:"Quick tools for automation & monetization.",     file:'/downloads/hustlers-toolkit.zip' },
+      { slug:'affiliate',   name:"Affiliate Magnet Kit",     desc:"Templates & angles that convert.",               file:'/downloads/affiliate-magnet-kit.zip' },
+      { slug:'faststack',   name:"Fast Stack Starter Vault", desc:"Plug-and-play starter vault.",                   file:'/downloads/fast-stack-starter-vault.zip' },
+      { slug:'quicklaunch', name:"Quick Launch System",      desc:"Rapid setup to launch your business.",           file:'/downloads/quick-launch-system.zip' },
+      { slug:'dfy',         name:"Done-For-You Vault Launch",desc:"White-glove build & launch.",                    file:'/downloads/dfy-vault-launch.pdf' }
+    ];
+
+    // Read ?product=slug and mark unlocked in localStorage
+    const params = new URLSearchParams(location.search);
+    const justBought = params.get('product');
+    const KEY = 'amj_vault_unlocks';
+    const unlocks = new Set(JSON.parse(localStorage.getItem(KEY) || '[]'));
+    if (justBought) {
+      unlocks.add(justBought);
+      localStorage.setItem(KEY, JSON.stringify([...unlocks]));
+      const n = document.getElementById('success');
+      if (n) n.style.display = 'block';
+      // Clean the URL so refresh doesn't keep banner
+      setTimeout(()=>history.replaceState({}, '', 'purchases.html'), 600);
+    }
+
+    // Render cards
+    const $cards = document.getElementById('cards');
+    CATALOG.forEach(p => {
+      const unlocked = unlocks.has(p.slug);
+      const card = document.createElement('article');
+      card.className = 'card';
+      card.innerHTML = `
+        <div class="${unlocked ? 'unlocked' : 'locked'}">${unlocked ? 'UNLOCKED' : 'LOCKED'}</div>
+        <h2 class="title">${p.name}</h2>
+        <p class="desc">${p.desc}</p>
+        <a class="btn" ${unlocked ? '' : 'aria-disabled="true"'} ${unlocked ? `href="${p.file}"` : ''}>
+          ${unlocked ? 'Download' : 'Purchase to Unlock'}
+        </a>
+      `;
+      $cards.appendChild(card);
+    });
+  </script>
+</body>
+</html>
