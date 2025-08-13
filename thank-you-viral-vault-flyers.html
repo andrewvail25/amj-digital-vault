@@ -1,16 +1,31 @@
 <!doctype html><html lang="en"><head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<meta http-equiv="refresh" content="0; url=/ty-printables-7d2e19.html">
-<title>Redirecting…</title>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Thank You — Viral Vault Flyers</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+:root{--bg:#0b0f14;--card:#121923;--ink:#eaf2ff;--muted:#94a3b8;--accent:#22d3ee;--warn:#fca5a5}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Arial;background:var(--bg);color:var(--ink)}
+.wrap{max-width:860px;margin:0 auto;padding:22px}.card{background:linear-gradient(180deg,#121923,#0f141b);border:1px solid #223;border-radius:16px;padding:26px}
+h1{margin:0 0 8px}.btn{display:inline-block;padding:12px 16px;border-radius:12px;text-decoration:none;background:var(--accent);color:#001a1f;font-weight:800}
+.note{color:var(--muted)}.gate{display:none;color:var(--warn);margin-top:10px}
+</style></head><body><div class="wrap"><div class="card">
+<h1>You're set. ✅ Viral Vault Flyers</h1>
+<p class="note">This page is your delivery. Bookmark it.</p>
+<p id="gate" class="gate">Purchase required. If you just paid, wait a second…</p>
+<p><a id="dl" class="btn" href="https://drive.google.com/drive/folders/10co38mT6_ubRNpQ-0biyWpIergZOH416" target="_blank" rel="noopener" style="display:none">Instant Access — Download</a></p>
+<p class="note">Need help? hello@amjdigitalvault.com</p>
+</div></div>
 <script>
-  (function(){
-    var q = location.search;
-    location.replace("/ty-printables-7d2e19.html" + q);
-  })();
-</script>
-<noscript>
-  <meta http-equiv="refresh" content="0; url=/ty-printables-7d2e19.html">
-  <p>If you’re not redirected, <a href="/ty-printables-7d2e19.html">click here</a>.</p>
-</noscript>
-</head><body></body></html>
+(function(){
+  const sid=new URLSearchParams(location.search).get('session_id');
+  const KEY='amj_flyers_ok', EXP='amj_flyers_exp';
+  let ok=(sid&&sid.startsWith('cs_'))||sessionStorage.getItem(KEY)==='1';
+  if(ok){
+    sessionStorage.setItem(KEY,'1');
+    const now=Date.now(); const exp=+sessionStorage.getItem(EXP)||(now+24*3600*1000);
+    sessionStorage.setItem(EXP,exp); if(now>exp) ok=false;
+  }
+  dl.style.display=ok?'inline-block':'none';
+  gate.style.display=ok?'none':'block';
+})();
+</script></body></html>
