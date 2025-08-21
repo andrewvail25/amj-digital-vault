@@ -1,85 +1,174 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AMJ Digital Vault — Products</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vault Products</title>
   <style>
-    body { font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; margin:0; background:#fafafa; color:#111; line-height:1.5 }
-    header { background:#0b0f19; color:#fff; padding:20px; text-align:center }
-    header h1 { margin:0; font-size:28px }
-    .wrap { max-width:1000px; margin:0 auto; padding:28px }
-    ul.products { list-style:none; margin:0; padding:0; display:grid; gap:20px }
-    li.product { background:#fff; border:1px solid #eee; border-radius:12px; padding:22px }
-    li.product h3 { margin-top:0; font-size:20px }
-    .btn { display:inline-block; background:#5b8cfe; color:#fff; text-decoration:none; font-weight:600; border-radius:10px; padding:12px 18px; margin-top:10px }
-    .btn:hover { background:#4a7df5 }
-    footer { margin:40px 0 20px; text-align:center; font-size:13px; color:#555 }
+    body {
+      background-color: #121212;
+      color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      padding: 1rem;
+      color: #00ffd5;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .product {
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 1.5rem;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,255,213,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .product h2 {
+      margin-top: 0;
+      color: #00ffd5;
+    }
+    .most-popular {
+      background-color: #ff0080;
+      color: white;
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0.5rem 0;
+    }
+    .actions {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    .actions a {
+      text-decoration: none;
+      color: white;
+      text-align: center;
+      padding: 0.6rem 1rem;
+      border-radius: 5px;
+      flex: 1;
+    }
+    .buy {
+      background-color: #00ffd5;
+      color: #000;
+      font-weight: bold;
+    }
+    .details {
+      background-color: #333;
+      border: 1px solid #555;
+    }
+    @media (max-width: 768px) {
+      .products {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>AMJ Digital Vault</h1>
-    <p>Choose your product — instant access after purchase</p>
-  </header>
+  <h1>🔥 The Vault Product Lineup 🔥</h1>
+  <div class="products">
 
-  <div class="wrap">
-    <ul class="products">
-      <li class="product">
-        <h3>$7 – Mini Vault Sample Pack</h3>
-        <p>Sample bundle of AMJ Digital Vault content to get a taste of the system.</p>
-        <p><a class="btn" href="/mini-vault-sample-pack.html">View details</a></p>
-      </li>
+    <!-- Product 1 -->
+    <div class="product">
+      <h2>Mini Vault Sample Pack</h2>
+      <div class="price">$7</div>
+      <div class="actions">
+        <a href="https://buy.stripe.com/YOUR-STRIPE-LINK-1" class="buy">Buy Now</a>
+        <a href="/mini" class="details">View Details</a>
+      </div>
+    </div>
 
-      <li class="product">
-        <h3>$17 – Viral Vault Flyers</h3>
-        <p>Pre-made viral flyer templates to grow traffic quickly.</p>
-        <p><a class="btn" href="/viral-vault-flyers.html">View details</a></p>
-      </li>
+    <!-- Product 2 -->
+    <div class="product">
+      <h2>Viral Vault Flyers</h2>
+      <div class="price">$17</div>
+      <div class="actions">
+        <a href="https://buy.stripe.com/YOUR-STRIPE-LINK-2" class="buy">Buy Now</a>
+        <a href="/viral" class="details">View Details</a>
+      </div>
+    </div>
 
-      <li class="product">
-        <h3>$27 – Niche Printable Vault</h3>
-        <p>Printable digital assets tailored for popular niches.</p>
-        <p><a class="btn" href="/niche-printable-vault.html">View details</a></p>
-      </li>
+    <!-- Product 3 -->
+    <div class="product">
+      <h2>Niche Printable Vault</h2>
+      <div class="price">$27</div>
+      <div class="actions">
+        <a href="https://buy.stripe.com/YOUR-STRIPE-LINK-3" class="buy">Buy Now</a>
+        <a href="/niche" class="details">View Details</a>
+      </div>
+    </div>
 
-      <li class="product">
-        <h3>$37 – Template Funnel Kit</h3>
-        <p>Ready-to-go funnel templates to plug into your offers.</p>
-        <p><a class="btn" href="/template-funnel-kit.html">View details</a></p>
-      </li>
+    <!-- Product 4 -->
+    <div class="product">
+      <h2>Template Funnel Kit</h2>
+      <div class="price">$37</div>
+      <div class="actions">
+        <a href="https://buy.stripe.com/YOUR-STRIPE-LINK-4" class="buy">Buy Now</a>
+        <a href="/tem" class="details">View Details</a>
+      </div>
+    </div>
 
-      <li class="product">
-        <h3>$97 – Reseller Flash Funnel Pack</h3>
-        <p>High-converting funnels with reseller rights included.</p>
-        <p><a class="btn" href="/reseller-flash-funnel-pack.html">View details</a></p>
-      </li>
+    <!-- Product 5 -->
+    <div class="product">
+      <h2>Reseller Flash Funnel Pack</h2>
+      <div class="price">$97</div>
+      <div class="actions">
+        <a href="https://buy.stripe.com/YOUR-STRIPE-LINK-5" class="buy">Buy Now</a>
+        <a href="/res" class="details">View Details</a>
+      </div>
+    </div>
 
-      <!-- fixed filename -->
-      <li class="product">
-        <h3>$197 – The Vault Key (Low-Ticket License)</h3>
-        <p>Unlock core AMJ Digital Vault assets under the low-ticket license. Instant access after checkout.</p>
-        <p><a class="btn" href="/the-vault-key.html">View details</a></p>
-      </li>
+    <!-- Product 6 -->
+    <div class="product">
+      <span class="most-popular">Most Popular</span>
+      <h2>The Vault Key (Low-Ticket License)</h2>
+      <div class="price">$197</div>
+      <div class="actions">
+        <a href="https://buy.stripe.com/YOUR-STRIPE-LINK-6" class="buy">Buy Now</a>
+        <a href="/the" class="details">View Details</a>
+      </div>
+    </div>
 
-      <!-- fixed filename -->
-      <li class="product">
-        <h3>$497 – Vault Launch System</h3>
-        <p>Complete launch framework with funnels, templates, swipe files, and a quick-start checklist.</p>
-        <p><a class="btn" href="/vault-launch-system.html">View details</a></p>
-      </li>
+    <!-- Product 7 -->
+    <div class="product">
+      <h2>Vault Launch System</h2>
+      <div class="price">$497</div>
+      <div class="actions">
+        <a href="https://buy.stripe.com/YOUR-STRIPE-LINK-7" class="buy">Buy Now</a>
+        <a href="/vault" class="details">View Details</a>
+      </div>
+    </div>
 
-      <!-- fixed filename to match your repo (dfy-...) -->
-      <li class="product">
-        <h3>$997 – Done-For-You Digital Business Launch Kit</h3>
-        <p>Full done-for-you digital business kit with implementation support to launch immediately.</p>
-        <p><a class="btn" href="/dfy-digital-business-launch-kit.html">View details</a></p>
-      </li>
-    </ul>
+    <!-- Product 8 -->
+    <div class="product">
+      <h2>Done-For-You Digital Business Kit</h2>
+      <div class="price">$997</div>
+      <div class="actions">
+        <a href="https://buy.stripe.com/YOUR-STRIPE-LINK-8" class="buy">Buy Now</a>
+        <a href="/dfy" class="details">View Details</a>
+      </div>
+    </div>
+
   </div>
-
-  <footer>
-    © <script>document.write(new Date().getFullYear())</script> AMJ Digital Vault. All rights reserved.
-  </footer>
 </body>
 </html>
