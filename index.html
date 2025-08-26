@@ -1,155 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>AMJ Digital Vault — Products</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #0e0e0e;
-      color: #f1f1f1;
-    }
-
-    header {
-      background: #111;
-      padding: 30px 20px;
-      text-align: center;
-      border-bottom: 1px solid #333;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-      color: #5b8cfe;
-    }
-
-    header p {
-      margin: 5px 0 0;
-      color: #aaa;
-      font-size: 15px;
-    }
-
-    .wrap {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    ul.products {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-
-    li.product {
-      background: #1b1b1b;
-      padding: 22px;
-      border-radius: 14px;
-      border: 1px solid #2a2a2a;
-      box-shadow: 0 0 8px rgba(0,0,0,0.4);
-      transition: all 0.2s ease-in-out;
-    }
-
-    li.product:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.6);
-    }
-
-    li.product h3 {
-      margin-top: 0;
-      font-size: 20px;
-      color: #5b8cfe;
-    }
-
-    li.product p {
-      font-size: 14px;
-      color: #ccc;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 10px 16px;
-      background: #5b8cfe;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.2s ease-in-out;
-    }
-
-    .btn:hover {
-      background: #4a7df5;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 13px;
-      color: #777;
-      border-top: 1px solid #222;
-    }
+    body { font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; margin:0; background:#f5f7fa; color:#111; line-height:1.5 }
+    header { background:#0b0f19; color:#fff; padding:20px; text-align:center }
+    header h1 { margin:0; font-size:28px }
+    .wrap { max-width:1000px; margin:0 auto; padding:28px }
+    ul.products { list-style:none; margin:0; padding:0; display:grid; gap:20px }
+    li.product { background:#fff; border:1px solid #ddd; border-radius:12px; padding:22px; box-shadow:0 2px 5px rgba(0,0,0,0.06) }
+    li.product h3 { margin-top:0; font-size:20px }
+    .btn { display:inline-block; background:#0077ff; color:#fff; text-decoration:none; font-weight:600; border-radius:10px; padding:12px 18px; margin-top:10px }
+    .btn:hover { background:#005fdd }
+    footer { margin:40px 0 20px; text-align:center; font-size:13px; color:#555 }
+    footer a { color:#555; margin: 0 10px; text-decoration:none }
+    footer a:hover { text-decoration:underline }
+    .legal { text-align:center; margin-top:20px; font-size:12px; color:#888 }
   </style>
 </head>
 <body>
   <header>
     <h1>AMJ Digital Vault</h1>
-    <p>Choose your product – instant access after purchase</p>
+    <p>Choose your product — instant access after purchase</p>
   </header>
 
   <div class="wrap">
     <ul class="products">
+
       <li class="product">
         <h3>$7 – Mini Vault Sample Pack</h3>
         <p>Sample bundle of AMJ Digital Vault content to get a taste of the system.</p>
-        <a class="btn" href="/mini-vault-sample-pack.html">View details</a>
+        <p><a class="btn" href="/mini-vault-sample-pack.html">More details</a></p>
       </li>
+
       <li class="product">
         <h3>$17 – Viral Vault Flyers</h3>
         <p>Pre-made viral flyer templates to grow traffic quickly.</p>
-        <a class="btn" href="/viral-vault-flyers.html">View details</a>
+        <p><a class="btn" href="/viral-vault-flyers.html">More details</a></p>
       </li>
+
       <li class="product">
         <h3>$27 – Niche Printable Vault</h3>
         <p>Printable digital assets tailored for popular niches.</p>
-        <a class="btn" href="/niche-printable-vault.html">View details</a>
+        <p><a class="btn" href="/niche-printable-vault.html">More details</a></p>
       </li>
+
       <li class="product">
         <h3>$37 – Template Funnel Kit</h3>
         <p>Ready-to-go funnel templates to plug into your offers.</p>
-        <a class="btn" href="/template-funnel-kit.html">View details</a>
+        <p><a class="btn" href="/template-funnel-kit.html">More details</a></p>
       </li>
+
       <li class="product">
         <h3>$97 – Reseller Flash Funnel Pack</h3>
         <p>High-converting funnels with reseller rights included.</p>
-        <a class="btn" href="/reseller-flash-funnel-pack.html">View details</a>
+        <p><a class="btn" href="/reseller-flash-funnel-pack.html">More details</a></p>
       </li>
+
       <li class="product">
         <h3>$197 – The Vault Key (Low-Ticket License)</h3>
-        <p>Unlock core AMJ Digital Vault assets under the low-ticket license. Instant access after checkout.</p>
-        <a class="btn" href="/the-vault-key.html">View details</a>
+        <p>Unlock core AMJ Digital Vault assets under the low-ticket license.</p>
+        <p><a class="btn" href="/the-vault-key.html">More details</a></p>
       </li>
+
       <li class="product">
         <h3>$497 – Vault Launch System</h3>
-        <p>Complete launch framework with funnels, templates, swipe files, and a quick-start checklist.</p>
-        <a class="btn" href="/vault-launch-system.html">View details</a>
+        <p>Complete launch framework with funnels, templates, and checklist.</p>
+        <p><a class="btn" href="/vault-launch-system.html">More details</a></p>
       </li>
+
       <li class="product">
-        <h3>$997 – Done-For-You Digital Business Launch Kit</h3>
-        <p>Full done-for-you digital business kit with implementation support to launch immediately.</p>
-        <a class="btn" href="/dfy-digital-business-launch-kit.html">View details</a>
+        <h3>$997 – DFY Digital Business Launch Kit</h3>
+        <p>Done-for-you business kit with everything you need to launch.</p>
+        <p><a class="btn" href="/dfy-digital-business-launch-kit.html">More details</a></p>
       </li>
+
     </ul>
   </div>
 
   <footer>
-    © <script>document.write(new Date().getFullYear())</script> AMJ Digital Vault. All rights reserved.<br>
-    Contact: <a href="mailto:support@amjdigitalvault.com" style="color:#5b8cfe;">support@amjdigitalvault.com</a>
+    <p class="legal">
+      © <script>document.write(new Date().getFullYear())</script> AMJ Digital Vault. All rights reserved.
+      <br/>
+      <a href="/terms-of-use.html">Terms of Use</a> | 
+      <a href="/license-agreement.html">License Agreement</a>
+    </p>
   </footer>
 </body>
 </html>
