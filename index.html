@@ -1,76 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AMJ Digital Vault</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-start py-8 px-4">
-    <h1 class="text-3xl font-bold mb-6">AMJ Digital Vault</h1>
-    <p class="text-lg mb-8 text-center">Choose your product — instant access after purchase</p>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AMJ Digital Vault — Products</title>
+  <style>
+    body { font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; margin:0; background:#fafafa; color:#111; line-height:1.5 }
+    header { background:#0b0f19; color:#fff; padding:20px; text-align:center }
+    header h1 { margin:0; font-size:28px }
+    .wrap { max-width:1000px; margin:0 auto; padding:28px }
+    ul.products { list-style:none; margin:0; padding:0; display:grid; gap:20px }
+    li.product { background:#fff; border:1px solid #eee; border-radius:12px; padding:22px }
+    li.product h3 { margin-top:0; font-size:20px }
+    .btn { display:inline-block; background:#5b8cfe; color:#fff; text-decoration:none; font-weight:600; border-radius:10px; padding:12px 18px; margin-top:10px }
+    .btn:hover { background:#4a7df5 }
+    footer { margin:40px 0 20px; text-align:center; font-size:13px; color:#555 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AMJ Digital Vault</h1>
+    <p>Choose your product — instant access after purchase</p>
+  </header>
+  <div class="wrap">
+    <ul class="products">
 
-    <div class="w-full max-w-md space-y-6">
-      <!-- $7 Product -->
-      <div class="bg-white text-black rounded-xl shadow p-6">
-        <h2 class="text-xl font-semibold mb-2">$7 – Mini Vault Sample Pack</h2>
-        <p class="mb-4">Sample bundle of AMJ Digital Vault content to get a taste of the system.</p>
-        <a href="/mini" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded block w-full text-center">More details</a>
-      </div>
+      <li class="product">
+        <h3>$7 – Mini Vault Sample Pack</h3>
+        <p>Sample bundle of AMJ Digital Vault content to get a taste of the system.</p>
+        <p><a class="btn" href="/mini-vault-sample-pack.html">View details</a></p>
+      </li>
 
-      <!-- $17 Product -->
-      <div class="bg-white text-black rounded-xl shadow p-6">
-        <h2 class="text-xl font-semibold mb-2">$17 – Viral Vault Flyers</h2>
-        <p class="mb-4">Pre-made viral flyer templates to grow traffic quickly.</p>
-        <a href="/flyers" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded block w-full text-center">More details</a>
-      </div>
+      <li class="product">
+        <h3>$17 – Viral Vault Flyers</h3>
+        <p>Pre-made viral flyer templates to grow traffic quickly.</p>
+        <p><a class="btn" href="/viral-vault-flyers.html">View details</a></p>
+      </li>
 
-      <!-- $27 Product -->
-      <div class="bg-white text-black rounded-xl shadow p-6">
-        <h2 class="text-xl font-semibold mb-2">$27 – Niche Printable Vault</h2>
-        <p class="mb-4">Printable vault full of niche templates to sell fast.</p>
-        <a href="/printables" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded block w-full text-center">More details</a>
-      </div>
+      <li class="product">
+        <h3>$27 – Niche Printable Vault</h3>
+        <p>Printable digital assets tailored for popular niches.</p>
+        <p><a class="btn" href="/niche-printable-vault.html">View details</a></p>
+      </li>
 
-      <!-- $497 Product -->
-      <div class="bg-white text-black rounded-xl shadow p-6">
-        <h2 class="text-xl font-semibold mb-2">$497 – Vault Launch System</h2>
-        <p class="mb-4">Complete launch framework with funnels, templates, and checklist.</p>
-        <a href="/launch" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded block w-full text-center">More details</a>
-      </div>
+      <li class="product">
+        <h3>$37 – Template Funnel Kit</h3>
+        <p>Ready-to-go funnel templates to plug into your offers.</p>
+        <p><a class="btn" href="/template-funnel-kit.html">View details</a></p>
+      </li>
 
-      <!-- $997 DFY Product -->
-      <div class="bg-white text-black rounded-xl shadow p-6">
-        <h2 class="text-xl font-semibold mb-2">$997 – DFY Digital Business Launch Kit</h2>
-        <p class="mb-4">Done-for-you business kit with everything you need to launch.</p>
-        <a href="/dfy" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded block w-full text-center">More details</a>
-      </div>
-    </div>
+      <li class="product">
+        <h3>$97 – Reseller Flash Funnel Pack</h3>
+        <p>High-converting funnels with reseller rights included.</p>
+        <p><a class="btn" href="/reseller-flash-funnel-pack.html">View details</a></p>
+      </li>
 
-    <!-- DFY Page Note Section -->
-    <div class="mt-12 w-full max-w-2xl bg-gray-800 text-white rounded-xl p-6 text-center">
-      <h2 class="text-2xl font-bold mb-4">Done-For-You Digital Business Launch Kit</h2>
-      <p class="text-lg mb-2">Display price: <strong>$997</strong> (final price shown on Stripe)</p>
-      <p class="mb-4">Skip the guesswork. Get a ready-to-sell system with pages, copy, delivery, and revenue levers built in.</p>
-      <ul class="list-disc text-left ml-6 mb-4">
-        <li>Prebuilt pages + funnel map</li>
-        <li>Plug-and-sell product stack</li>
-        <li>Email templates + sequences</li>
-        <li>Traffic jumpstart checklist</li>
-        <li>Launch day SOP + QA list</li>
-        <li>Instant delivery + updates</li>
-      </ul>
-      <a href="/dfy" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full text-lg">Start My DFY Launch — $997</a>
-      <p class="mt-3 text-sm text-gray-300">Secure checkout via Stripe. You’ll see the official price there.</p>
-    </div>
+      <li class="product">
+        <h3>$197 – The Vault Key (Low-Ticket License)</h3>
+        <p>Unlock core AMJ Digital Vault assets under the low-ticket license. Instant access after checkout.</p>
+        <p><a class="btn" href="/the-vault-key.html">View details</a></p>
+      </li>
 
-    <!-- Footer -->
-    <footer class="mt-12 text-center text-gray-500 text-sm">
-      <p>© 2025 AMJ Digital Vault. All rights reserved.</p>
-      <p>
-        <a href="/terms" class="hover:underline">Terms of Use</a> |
-        <a href="/license" class="hover:underline">License Agreement</a>
-      </p>
-    </footer>
-  </body>
+      <li class="product">
+        <h3>$297 – Vault Conversion Accelerator</h3>
+        <p>Boost your funnel performance with advanced conversion tactics, split tests, and scripts.</p>
+        <p><a class="btn" href="/vault-conversion-accelerator.html">View details</a></p>
+      </li>
+
+      <li class="product">
+        <h3>$497 – Vault Launch System</h3>
+        <p>Complete launch framework with funnels, templates, swipe files, and a quick-start checklist.</p>
+        <p><a class="btn" href="/vault-launch-system.html">View details</a></p>
+      </li>
+
+      <li class="product">
+        <h3>$997 – Done-For-You Digital Business Launch Kit</h3>
+        <p>Full done-for-you digital business kit with implementation support to launch immediately.</p>
+        <p><a class="btn" href="/dfy-digital-business-launch-kit.html">View details</a></p>
+      </li>
+
+    </ul>
+  </div>
+  <footer>
+    © <script>document.write(new Date().getFullYear())</script> AMJ Digital Vault. All rights reserved.
+  </footer>
+</body>
 </html>
