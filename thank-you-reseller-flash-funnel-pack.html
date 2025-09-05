@@ -1,4 +1,5 @@
-<!doctype html><html lang="en"><head>
+<!doctype html>
+<html lang="en"><head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Thank You — Reseller Flash Funnel Pack</title>
 <meta name="robots" content="noindex,nofollow">
@@ -7,65 +8,21 @@
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Arial;background:var(--bg);color:var(--ink)}
 .wrap{max-width:860px;margin:0 auto;padding:22px}.card{background:linear-gradient(180deg,#121923,#0f141b);border:1px solid #223;border-radius:16px;padding:26px}
 h1{margin:0 0 8px}.btn{display:inline-block;padding:12px 16px;border-radius:12px;text-decoration:none;background:var(--accent);color:#001a1f;font-weight:800}
-.note{color:var(--muted)}.gate{display:none;color:var(--warn);margin-top:10px}
-</style></head><body><div class="wrap"><div class="card">
-<h1>You're set. ✅ Reseller Flash Funnel Pack</h1>
-<p class="note">This page is your delivery. Bookmark it.</p>
-<p id="gate" class="gate">Purchase required. If you just paid, wait a second…</p>
-<p><a id="dl" class="btn" href="https://drive.google.com/drive/folders/10hHmXc91Huu8oK_cfxoYyBdjndPJNJRr" target="_blank" rel="noopener" style="display:none">Instant Access — Download</a></p>
-<p class="note">Need help? hello@amjdigitalvault.com</p>
+.note{color:var(--muted)}.gate{color:var(--warn);margin-top:10px}
+</style></head><body>
+<div class="wrap"><div class="card">
+  <h1>You’re set. ✅ Reseller Flash Funnel Pack</h1>
+  <p class="note">This page is your delivery. Bookmark it.</p>
+  <p id="gate" class="gate">Purchase required ❌<br>If you just paid, wait a second and refresh.</p>
+  <p><a id="dl" class="btn" href="https://drive.google.com/drive/folders/10hHmXc91Huu8oK_cfxoYyBdjndPJNJRr" target="_blank" rel="noopener">Instant Access — Download</a></p>
+  <p class="note">Need help? hello@amjdigitalvault.com</p>
 </div></div>
 <script>
 (function(){
-  const sid=new URLSearchParams(location.search).get('session_id');
-  const KEY='amj_resell_ok', EXP='amj_resell_exp';
-  let ok=(sid&&sid.startsWith('cs_'))||sessionStorage.getItem(KEY)==='1';
-  if(ok){
-    sessionStorage.setItem(KEY,'1');
-    const now=Date.now(); const exp=+sessionStorage.getItem(EXP)||(now+24*3600*1000);
-    sessionStorage.setItem(EXP,exp); if(now>exp) ok=false;
-  }
-  dl.style.display=ok?'inline-block':'none';
-  gate.style.display=ok?'none':'block';
-})();
-</script>gate.style.display = ok ? 'none' : 'block';
+  const ok = new URLSearchParams(location.search).get('ok');
+  const unlocked = ok==='1' || ok==='true';
+  dl.style.display = unlocked ? 'inline-block' : 'none';
+  gate.style.display = unlocked ? 'none' : 'block';
 })();
 </script>
-
-<!-- 🔒 Drop-in purchase gate -->
-<script>
-(function () {
-  var ok = new URL(location.href).searchParams.get('ok');
-  var unlocked = ok === '1' || ok === 'true';
-
-  if (unlocked) return; // show your normal thank-you content
-
-  // Locked: replace the whole body with the lock card
-  var css = `
-    :root { color-scheme: dark; }
-    html,body{height:100%}
-    body{margin:0;background:#0b0b0c;color:#e8e9ed;
-         font:16px/1.6 system-ui,-apple-system,SegoeUI,Roboto,Inter,Arial,sans-serif}
-    .gate-wrap{min-height:100%;display:grid;place-items:center;padding:24px}
-    .gate-card{width:min(680px,92vw);background:#121316;border:1px solid #23252b;
-      border-radius:18px;box-shadow:0 0 0 1px rgba(255,255,255,.02) inset;padding:28px 28px 20px}
-    .gate-pill{display:inline-block;margin:4px auto 12px auto;padding:10px 16px;border-radius:12px;
-      font-weight:700;background:#20222a;border:1px solid #2d3038}
-    .gate-pill .x{color:#ff5252;margin-left:8px}
-    .gate-msg{margin:8px 0 14px;color:#b9bcc6;text-align:center}
-    .gate-help{margin-top:12px;font-size:14px;color:#9aa0ab;text-align:center}
-    .gate-help a{color:#c4d3ff;text-decoration:underline}
-  `;
-  document.body.innerHTML =
-    '<style>'+css+'</style>'+
-    '<div class="gate-wrap"><div class="gate-card">'+
-      '<div class="gate-pill">Purchase required <span class="x">❌</span></div>'+
-      '<div class="gate-msg">If you just paid, wait a few seconds and refresh this page.</div>'+
-      '<div class="gate-help">Need help? Email <a href="mailto:support@amjdigitalvault.com">support@amjdigitalvault.com</a></div>'+
-    '</div></div>';
-})();
-</script>
-<!-- 🔒 End purchase gate -->
-
-</body>
-</html>
+</body></html>
