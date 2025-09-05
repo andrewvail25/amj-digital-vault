@@ -1,30 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>You're in ✅ — The Vault Key</title>
+  <meta charset="utf-8" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>You're in — The Vault Key</title>
   <style>
-    body { background:#111; color:#fff; font-family:Arial,sans-serif; text-align:center; padding:50px; }
-    .box { background:#1c1c1c; padding:30px; border-radius:10px; max-width:500px; margin:auto; }
-    a.btn { display:inline-block; margin-top:20px; padding:12px 24px; background:#3b82f6; color:#fff; text-decoration:none; border-radius:6px; font-size:16px; }
+    :root { color-scheme: dark; }
+    body { margin:0; background:#0b0b0c; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif; color:#e8e9ed; }
+    .wrap { max-width:880px; margin:40px auto; padding:0 16px; }
+    .card { background:#121316; border:1px solid #23252b; border-radius:14px; padding:28px; box-shadow:0 0 0 1px rgba(255,255,255,0.02) inset; }
+    .locked { max-width:520px; margin:120px auto; text-align:center; }
+    .pill { display:inline-block; margin-bottom:18px; font-weight:700; background:#20222a; border:1px solid #2d3038; padding:10px 16px; border-radius:10px; }
+    .pill .x { color:#ff5252; margin-left:6px; }
+    h1 { margin:0 0 14px; font-size:32px; letter-spacing:.2px; }
+    p { margin:0 0 14px; color:#b9bcc6; }
+    .btn { display:inline-block; margin-top:10px; background:#6592ff; color:#061318; font-weight:700; text-decoration:none; padding:14px 18px; border-radius:10px; }
+    .help { margin-top:22px; font-size:14px; color:#9aa0ab; }
+    .ok { display:none; }
   </style>
 </head>
 <body>
-  <div class="box" id="content">
-    <h1>You're in ✅ — The Vault Key</h1>
-    <p>Click below to access your files instantly:</p>
-    <a class="btn" href="https://drive.google.com/file/d/19KIrX-eQZs_lS2EPUjQpzgtScTeN2nqD/view?usp=drivesdk" target="_blank">Open The Vault Key</a>
-    <p style="margin-top:20px;">Need help? Email <a href="mailto:support@amjdigitalvault.com">support@amjdigitalvault.com</a></p>
+  <div class="wrap">
+    <!-- LOCKED VIEW -->
+    <div id="locked" class="card locked">
+      <div class="pill">Purchase required <span class="x">❌</span></div>
+      <p>If you just paid, wait a few seconds and refresh this page.</p>
+      <p class="help">Need help? Email <a href="mailto:support@amjdigitalvault.com">support@amjdigitalvault.com</a></p>
+    </div>
+
+    <!-- UNLOCKED VIEW -->
+    <div id="ok" class="card ok">
+      <h1>You're in ✅ — The Vault Key</h1>
+      <p>Click below to access your files instantly.</p>
+      <!-- 🔽🔽 Paste the real Vault Key delivery URL in the href below 🔽🔽 -->
+      <a class="btn" href="PASTE_THE_VAULT_KEY_LINK_HERE" target="_blank" rel="noopener">Open The Vault Key</a>
+      <p class="help">Need help? Email <a href="mailto:support@amjdigitalvault.com">support@amjdigitalvault.com</a></p>
+    </div>
   </div>
 
   <script>
-    if (!window.location.search.includes("ok=1")) {
-      document.getElementById("content").innerHTML = `
-        <h1>Purchase required ❌</h1>
-        <p>If you just paid, please wait a few seconds and refresh this page.</p>
-        <p>Need help? Email <a href="mailto:support@amjdigitalvault.com">support@amjdigitalvault.com</a></p>
-      `;
-    }
+    const ok = new URL(location.href).searchParams.get('ok');
+    const unlocked = ok === '1' || ok === 'true';
+    document.getElementById(unlocked ? 'ok' : 'locked').style.display = 'block';
   </script>
 </body>
 </html>
