@@ -1,28 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>You're in — Vault Conversion Accelerator</title>
+  <meta charset="UTF-8">
+  <title>You're in 🎯 — Vault Conversion Accelerator</title>
   <style>
-    body{margin:0;font-family:Inter,system-ui,Arial;background:#0b0f14;color:#eaf2ff}
-    .wrap{max-width:860px;margin:0 auto;padding:28px}
-    .card{background:#121923;border:1px solid #223;border-radius:16px;padding:28px}
-    h1{margin:0 0 12px;font-size:28px}
-    a.btn{display:inline-block;margin-top:12px;padding:14px 18px;border-radius:12px;
-          background:#22d3ee;color:#04131a;text-decoration:none;font-weight:700}
-    a.btn:hover{filter:brightness(1.05)}
-    .sub{margin-top:18px;font-size:13px;color:#94a3b8}
+    body { background:#111; color:#fff; font-family:Arial,sans-serif; text-align:center; padding:50px; }
+    .box { background:#1c1c1c; padding:30px; border-radius:10px; max-width:500px; margin:auto; }
+    a.btn { display:inline-block; margin-top:20px; padding:12px 24px; background:#06b6d4; color:#fff; text-decoration:none; border-radius:6px; font-size:16px; }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="card">
-      <h1>You're in 🎯 — Vault Conversion Accelerator</h1>
-      <p>Click below to access your files instantly:</p>
-      <a class="btn" href="https://drive.google.com/file/d/16-jTzPbCmm-G0jdqobKMdBnQLM1uJEHp/view?usp=drivesdk" target="_blank" rel="noopener">Open Conversion Accelerator</a>
-      <p class="sub">Need help? Email <a href="mailto:support@amjdigitalvault.com">support@amjdigitalvault.com</a></p>
-    </div>
+  <div class="box" id="content">
+    <h1>You're in 🎯 — Vault Conversion Accelerator</h1>
+    <p>Click below to access your files instantly:</p>
+    <a class="btn" href="https://drive.google.com/file/d/16-jTzPbCmm-G0jdqobKMdBnQLM1uJEHp/view?usp=drivesdk" target="_blank">Open Conversion Accelerator</a>
+    <p style="margin-top:20px;">Need help? Email <a href="mailto:support@amjdigitalvault.com">support@amjdigitalvault.com</a></p>
   </div>
+
+  <script>
+    if (!window.location.search.includes("ok=1")) {
+      document.getElementById("content").innerHTML = `
+        <h1>Purchase required ❌</h1>
+        <p>If you just paid, please wait a few seconds and refresh this page.</p>
+        <p>Need help? Email <a href="mailto:support@amjdigitalvault.com">support@amjdigitalvault.com</a></p>
+      `;
+    }
+  </script>
 </body>
 </html>
