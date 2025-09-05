@@ -15,28 +15,36 @@ h1{margin:0 0 8px}.btn{display:inline-block;padding:12px 16px;border-radius:12px
 <p><a id="dl" class="btn" href="https://drive.google.com/drive/folders/10iKVTyrXuaPwW265r_D-hPRvVECSuA_Z" target="_blank" rel="noopener" style="display:none">Instant Access — Download</a></p>
 <p class="note">Need help? hello@amjdigitalvault.com</p>
 </div></div>
+
 <script>
 (function(){
-  const sid=new URLSearchParams(location.search).get('session_id');
+  // Primary unlock via Stripe Checkout session
+  const sid = new URLSearchParams(location.search).get('session_id');
   const KEY='amj_dfy_ok', EXP='amj_dfy_exp';
-  let ok=(sid&&sid.startsWith('cs_'))||sessionStorage.getItem(KEY)==='1';
-  if(ok){
+  let ok=(sid && sid.startsWith('cs_')) || sessionStorage.getItem(KEY)==='1';
+
+  if (ok) {
     sessionStorage.setItem(KEY,'1');
-    const now=Date.now(); const exp=+sessionStorage.getItem(EXP)||(now+24*3600*1000);
-    sessionStorage.setItem(EXP,exp); if(now>exp) ok=false;
+    const now=Date.now();
+    const exp= +sessionStorage.getItem(EXP) || (now + 24*3600*1000);
+    sessionStorage.setItem(EXP, exp);
+    if (now>exp) ok=false;
   }
-  dl.style.display=ok?'inline-block':'none';
-  gate.style.display=ok?'none':'block';
+
+  dl.style.display = ok ? 'inline-block' : 'none';
+  gate.style.display = ok ? 'none' : 'block';
 })();
-</script><!-- 🔒 Drop-in purchase gate (copy/paste just before </body>) -->
+</script>
+
+<!-- Drop-in gate that now ALSO respects the same session key -->
 <script>
 (function () {
-  var ok = new URL(location.href).searchParams.get('ok');
-  var unlocked = ok === '1' || ok === 'true';
+  const KEY='amj_dfy_ok';
+  const okParam = new URL(location.href).searchParams.get('ok');
+  const unlocked = (okParam === '1' || okParam === 'true' || sessionStorage.getItem(KEY)==='1');
+  if (unlocked) return; // let the normal content show
 
-  if (unlocked) return; // show your normal thank-you content
-
-  // Locked: replace the whole body with the standard lock card
+  // Otherwise, show the standard lock card
   var css = `
     :root { color-scheme: dark; }
     html,body{height:100%}
@@ -61,6 +69,5 @@ h1{margin:0 0 8px}.btn{display:inline-block;padding:12px 16px;border-radius:12px
     '</div></div>';
 })();
 </script>
-<!-- 🔒 End purchase gate -->
-</body>
-</html>
+
+</body></html>
