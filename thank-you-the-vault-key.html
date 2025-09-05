@@ -1,48 +1,28 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="robots" content="noindex,nofollow" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>You're in — The Vault Key</title>
-  <style>
-    :root { color-scheme: dark; }
-    body { margin:0; background:#0b0b0c; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif; color:#e8e9ed; }
-    .wrap { max-width:880px; margin:40px auto; padding:0 16px; }
-    .card { background:#121316; border:1px solid #23252b; border-radius:14px; padding:28px; box-shadow:0 0 0 1px rgba(255,255,255,0.02) inset; }
-    .locked { max-width:520px; margin:120px auto; text-align:center; }
-    .pill { display:inline-block; margin-bottom:18px; font-weight:700; background:#20222a; border:1px solid #2d3038; padding:10px 16px; border-radius:10px; }
-    .pill .x { color:#ff5252; margin-left:6px; }
-    h1 { margin:0 0 14px; font-size:32px; letter-spacing:.2px; }
-    p { margin:0 0 14px; color:#b9bcc6; }
-    .btn { display:inline-block; margin-top:10px; background:#6592ff; color:#061318; font-weight:700; text-decoration:none; padding:14px 18px; border-radius:10px; }
-    .help { margin-top:22px; font-size:14px; color:#9aa0ab; }
-    .ok { display:none; }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <!-- LOCKED VIEW -->
-    <div id="locked" class="card locked">
-      <div class="pill">Purchase required <span class="x">❌</span></div>
-      <p>If you just paid, wait a few seconds and refresh this page.</p>
-      <p class="help">Need help? Email <a href="mailto:support@amjdigitalvault.com">support@amjdigitalvault.com</a></p>
-    </div>
-
-    <!-- UNLOCKED VIEW -->
-    <div id="ok" class="card ok">
-      <h1>You're in ✅ — The Vault Key</h1>
-      <p>Click below to access your files instantly.</p>
-      <!-- 🔽🔽 Paste the real Vault Key delivery URL in the href below 🔽🔽 -->
-      <a class="btn" href="PASTE_THE_VAULT_KEY_LINK_HERE" target="_blank" rel="noopener">Open The Vault Key</a>
-      <p class="help">Need help? Email <a href="mailto:support@amjdigitalvault.com">support@amjdigitalvault.com</a></p>
-    </div>
-  </div>
-
-  <script>
-    const ok = new URL(location.href).searchParams.get('ok');
-    const unlocked = ok === '1' || ok === 'true';
-    document.getElementById(unlocked ? 'ok' : 'locked').style.display = 'block';
-  </script>
-</body>
-</html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Thank You — The Vault Key</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+:root{--bg:#0b0f14;--card:#121923;--ink:#eaf2ff;--muted:#94a3b8;--accent:#22d3ee;--warn:#fca5a5}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Arial;background:var(--bg);color:var(--ink)}
+.wrap{max-width:860px;margin:0 auto;padding:22px}.card{background:linear-gradient(180deg,#121923,#0f141b);border:1px solid #223;border-radius:16px;padding:26px}
+h1{margin:0 0 8px}.btn{display:inline-block;padding:12px 16px;border-radius:12px;text-decoration:none;background:var(--accent);color:#001a1f;font-weight:800}
+.note{color:var(--muted)}.gate{color:var(--warn);margin-top:10px}
+</style></head><body>
+<div class="wrap"><div class="card">
+  <h1>You’re set. ✅ The Vault Key</h1>
+  <p class="note">This page is your delivery. Bookmark it.</p>
+  <p id="gate" class="gate">Purchase required ❌<br>If you just paid, wait a second and refresh.</p>
+  <p><a id="dl" class="btn" href="https://drive.google.com/drive/folders/19KIrX-eQZs_lS2EPUjQpzgtScTeN2nqD" target="_blank" rel="noopener">Instant Access — Download</a></p>
+  <p class="note">Need help? hello@amjdigitalvault.com</p>
+</div></div>
+<script>
+(function(){
+  const ok = new URLSearchParams(location.search).get('ok');
+  const unlocked = ok==='1' || ok==='true';
+  dl.style.display = unlocked ? 'inline-block' : 'none';
+  gate.style.display = unlocked ? 'none' : 'block';
+})();
+</script>
+</body></html>
